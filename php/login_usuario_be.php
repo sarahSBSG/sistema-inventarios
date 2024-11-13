@@ -11,7 +11,7 @@
     //VARIABLE CON LA FUNCION MYSQLI_QUERY PARA PODER TENER ACCESO A VARIABLE $CONEXION 
     $validar_login = mysqli_query($conexion, "SELECT * FROM usuarios WHERE correo='$correo' and clave='$clave' ");
     //CONDICIONAL PARA QUE CON LA FUNCION MYSQLI_NUM_ROWS SE LEA LA INFORMACION INGRESADA POR FILAS,
-    //SI ENCUANTRA UNA FILA EN LA VARIABLE VALIDAR_LOGIN ENVIARA A LA NUEVA PAGINA INVENTARIOS Y SINO,
+    //SI ENCUENTRA UNA FILA EN LA VARIABLE VALIDAR_LOGIN ENVIARA A LA NUEVA PAGINA INVENTARIOS Y SINO,
     //MANDARA UN MENSAJE DE ERROR Y REGRESE A PAGINA DE INICIO
     if(mysqli_num_rows($validar_login) > 0){
         //VARIABLE SESSION QUE ALMACENA LA VARIABLE USUARIO DEL CORREO DEL USUARIO QUE HA INICIADO LA SESION 
@@ -21,7 +21,7 @@
     }else{
         echo '
             <script>
-                alert("Usuario no exite, porfavor verifique los datos introducidos");
+                alert("Falta de datos o estan incorrectos, porfavor verifique los datos introducidos");
                 window.location = "../index.php";
             </script>
         ';

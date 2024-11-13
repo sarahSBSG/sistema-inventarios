@@ -12,7 +12,7 @@
         die();
     }
 ?>
-<!--INICIO DE PAGINA INVENTRAIOS-->
+<!--INICIO DE PAGINA INVENTARIOS CON COMANDOS BASICOS-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
