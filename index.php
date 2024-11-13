@@ -1,3 +1,13 @@
+<?php
+    //INICIALIZAR LAS SESIONES
+    session_start();
+    //CONDICION PARA DETERMINAR SI EXISTE LA SESION Y MANDAR A LA UBICACION INVENTARIOS.PHP
+    if(isset($_SESSION['usuario'])){
+        header("location: inventarios.php");
+    }
+
+?>
+
 <!--ETIUETAS BASICAS PARA EL INICIO DE PAGINA WEB-->
 <!DOCTYPE html>
 <html lang="es">

@@ -1,3 +1,18 @@
+<?php
+    //INICIALIZAR LAS SESIONES
+    session_start();
+    //CONDICION PARA DETERMINAR SI EXISTE EL USUARIO Y SINO MANDAR UN MENSAJE DE ERROR
+    if(!isset($_SESSION['usuario'])){
+        echo '
+            <script>
+                alert("Porfavor debes iniciar sesion");
+            </script>
+        ';
+        session_destroy();
+        die();
+    }
+?>
+<!--INICIO DE PAGINA INVENTRAIOS-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,5 +22,7 @@
 </head>
 <body>
     <h1>BIENVENIDO A INVENTARIOS</h1>
+    <!--BOTON PARA CERRAR SESSION--> 
+    <a href="php/cerrar_sesion.php">Cerrar Sesión</a>
 </body>
 </html>
