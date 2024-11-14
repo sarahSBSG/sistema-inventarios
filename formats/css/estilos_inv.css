@@ -1,3 +1,4 @@
+/*FORMATO GENERAL DE LA PAGINA INVENTARIOS PARA AJUSTAR BORDES Y DECORACION DE TEXTOS QUE NO TENGA*/
 *{
     margin: 0;
     padding: 0;
@@ -6,10 +7,63 @@
     list-style: none;
 }
 
+/*FORMATO DEL CUERPO DE LA PAGINA PARA DEFINIR EL FONDO DE COLOR Y LA FUENTE*/
 body {
     background: linear-gradient(
-    90deg,
-    rgba #13ad00 25%,
-    rgba #00e112 75%);
+        90deg,
+        rgb(43, 125, 32) 25%,
+        rgb(19, 168, 32) 73%);
+    font-family: 'Roboto', sans-serif;
+}
 
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.green {
+    padding: 32px 0;
+    background-color: #225c1a;
+}
+
+.menu_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    color: rgb(51, 160, 49);
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.menu_container .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu_container .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #FFFFFF;
+    display: block;
+}
+
+.menu_container .navbar ul li a:hover {
+    color: #00ddff;
+}
+
+#menu_container {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
 }
