@@ -19,10 +19,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INVENTARIOS</title>
+    <link rel="stylesheet" href="formats/css/estilos_inv.css">
 </head>
-<body>
-    <h1>BIENVENIDO A INVENTARIOS</h1>
-    <!--BOTON PARA CERRAR SESSION--> 
-    <a href="php/cerrar_sesion.php">Cerrar Sesión</a>
+<body>   
+
+<!--HEADER PARA DEFINIR LA CABECERA DE UNA PAGINA-->
+<header>
+<!--DIV CON UNA CLASE LLAMADA GREEN PARA COLOR DE FONDO DE LA BARRA-->
+    <div class="green">
+<!--DIV CON UNA CLASE LLAMADA MENU_CONTAINER PARA LA BARRA-->
+        <div class="menu_container">
+<!--ENLACE SIGNO NUMERAL PARA SIMUILAR UN ENLACE CON UNA CLASE LLAMADA LOGO--> 
+        <a href="0" class="logo"> Logo</a>
+ <!--BOTON PARA CERRAR SESSION--> 
+        <a href="php/cerrar_sesion.php">Cerrar Sesión</a>
+<!--INPUT PARA LA PARTE RESPONSIVA-->
+        <input type="chechbox" id="menu" />
+<!--LABEL QUE HACE REFERENCIA AL ID MENU, AGREGANDO UNA IMAGEN CON SU CLASE-->
+        <label for="menu">
+            <img src="images/menu.png" class="menu-icono" alt="">
+        </label>
+<!--NAVEGACION CON UNA CLASE DE NOMBRE NAVBAR Y SE CREA UNA LISTA DESORDENADA-->
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        </div>
+    </div>    
+</header>
+
 </body>
 </html>
+
+
