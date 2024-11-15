@@ -40,7 +40,7 @@
 <!--NAVEGACION CON UNA CLASE DE NOMBRE NAVBAR Y SE CREA UNA LISTA DESORDENADA-->
             <nav class="navbar">
                 <ul>   
-                    <li><a href="php/inicio.php">Inicio</a></li>
+                    <li><a href="#">Inicio</a></li>
                     <li><a href="#">Servicios</a></li>
                     <li><a href="#">Productos</a></li>
                     <li><a href="#">Contacto</a></li>
@@ -54,5 +54,3 @@
 
 </body>
 </html>
-
-
