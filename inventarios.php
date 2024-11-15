@@ -30,25 +30,25 @@
 <!--DIV CON UNA CLASE LLAMADA MENU_CONTAINER PARA LA BARRA-->
         <div class="menu container">
 <!--ENLACE SIGNO NUMERAL PARA SIMUILAR UN ENLACE CON UNA CLASE LLAMADA LOGO--> 
-        <a href="0" class="logo"> Logo</a>
+        <a href="#" class="logo"> Logo</a>
 
 <!--INPUT PARA LA PARTE RESPONSIVA-->
-        <input type="chechbox" id="menu" />
+        <input type="checkbox" id="menu" />
 <!--LABEL QUE HACE REFERENCIA AL ID MENU, AGREGANDO UNA IMAGEN CON SU CLASE-->
         <label for="menu">
-            <img src="images/menu.png" class="menu-icono" alt="">
+            <img src="images/menu1.png" class="menu-icono" alt="">
         </label>
 <!--NAVEGACION CON UNA CLASE DE NOMBRE NAVBAR Y SE CREA UNA LISTA DESORDENADA-->
-        <nav class="navbar">
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Contacto</a></li>
-                 <!--BOTON PARA CERRAR SESSION--> 
-                <li><a href="php/cerrar_sesion.php">Cerrar Sesion</a></li>
-            </ul>
-        </nav>
+            <nav class="navbar">
+                <ul>   
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <!--BOTON PARA CERRAR SESSION--> 
+                    <li><a href="php/cerrar_sesion.php">Cerrar Sesion</a></li>
+                </ul>
+            </nav>
         </div>
     </div>    
 </header>
