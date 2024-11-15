@@ -31,12 +31,11 @@
         <div class="menu container">
 <!--ENLACE SIGNO NUMERAL PARA SIMUILAR UN ENLACE CON UNA CLASE LLAMADA LOGO--> 
         <a href="#" class="logo"> Logo</a>
-
 <!--INPUT PARA LA PARTE RESPONSIVA-->
         <input type="checkbox" id="menu" />
 <!--LABEL QUE HACE REFERENCIA AL ID MENU, AGREGANDO UNA IMAGEN CON SU CLASE-->
         <label for="menu">
-            <img src="images/menu1.png" class="menu-icono" alt="">
+            <img src="formats/images/menu.png" class="menu-icono" alt="">
         </label>
 <!--NAVEGACION CON UNA CLASE DE NOMBRE NAVBAR Y SE CREA UNA LISTA DESORDENADA-->
             <nav class="navbar">
