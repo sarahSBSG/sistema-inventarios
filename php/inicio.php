@@ -18,11 +18,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INVENTARIOS</title>
+    <title>INICIO</title>
     <link rel="stylesheet" href="formats/css/estilos_inv.css">
 </head>
-<body>   
-
+<body>
+    
 <!--HEADER PARA DEFINIR LA CABECERA DE UNA PAGINA-->
 <header>
 <!--DIV CON UNA CLASE LLAMADA BACK PARA COLOR DE FONDO DE LA BARRA-->
@@ -51,6 +51,8 @@
         </div>
     </div>    
 </header>
+    
+
 
 </body>
 </html>
