@@ -7,7 +7,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-body {
+.body {
     min-height: 100vh;
     background: #16531d;
     background-position: center;
