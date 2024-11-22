@@ -1,16 +1,89 @@
-.boton {
-    display: inline-block; /* Para que parezca un botón */
-    padding: 10px 20px; /* Espaciado interno */
-    font-size: 16px; /* Tamaño del texto */
-    color: white; /* Color del texto */
-    background-color: rgb(38, 255, 0); /* Fondo azul */
-    text-decoration: none; /* Quitar subrayado */
-    border-radius: 5px; /* Bordes redondeados */
-    border: none; /* Sin borde */
-    cursor: pointer; /* Mano al pasar por encima */
-    text-align: center; /* Centrar el texto */
+/*FORMATO GENERAL DE LA PAGINA INVENTARIOS PARA AJUSTAR BORDES Y DECORACION DE TEXTOS QUE NO TENGA*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 }
-
-.boton:hover {
-    background-color: rgb(86, 139, 0); /* Color más oscuro al pasar el mouse */
+/*FORMATO DEL CUERPO DE LA PAGINA PARA DEFINIR EL FONDO DE COLOR DEGRADADO Y LA FUENTE*/
+body {
+    background: linear-gradient(
+        90deg,
+        rgb(43, 125, 32) 25%,
+        rgb(19, 168, 32) 73%);
+    font-family: 'Roboto', sans-serif;
+}
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.back {
+    padding: 32px 0;
+    background-color: #225c1a;
+}
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+.logo {
+    font-size: 24px;
+    color: rgb(51, 160, 49);
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: white;
+    display: block;
+}
+.menu .navbar ul li a:hover {
+    color: #00ff33;
+}
+#menu {
+    display: none;
+}
+.menu-icono {
+    width: 25px;
+}
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+/*FORMATO DE LA MEDIA DEL MENU*/
+@media(max-width:991px) {
+    .menu {
+        padding: 30px;
+    }
+    .menu label {
+        display: initial;
+    }
+    .back {
+        padding: 60px 0;
+    }
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #2b7d20;
+        display: none;
+    }
+    .menu .navbar ul li {
+        width: 100%;
+    }
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
 }

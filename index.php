@@ -8,7 +8,7 @@
 
 ?>
 
-<!--ETIUETAS BASICAS PARA EL INICIO DE PAGINA WEB-->
+<!--ETIQUETAS BASICAS PARA EL INICIO DE PAGINA WEB-->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!--NOMBRE DE COMO APARECERA LA PAGINA WEB-->
     <title>GREEN</title>
-<!--PARA VINVULAR LOS ESTILOS DEL APARTADO ESTILOS.CSS-->
+<!--PARA VINCULAR LOS ESTILOS DEL APARTADO ESTILOS.CSS-->
     <link rel="stylesheet" href="formats/css/estilos.css">
 </head>
 <!--CUERPO DE LA PAGINA-->

@@ -7,9 +7,9 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.body {
+body {
     min-height: 100vh;
-    background: #16531d;
+    background: #1f7129;
     background-position: center;
     /*SE ADAPTA A TODA LA PAGINA*/
     background-attachment: fixed;
@@ -24,6 +24,7 @@
     height: 100vh;
     overflow: hidden;
 }
+
 /*ESTILOS DE INFORMACION Y CUADROS DE FONDO PARA LA MISMA INFORMACION*/
 .contenedor__todo{
     width: 100%;
@@ -32,6 +33,7 @@
     position: relative;
 
 }
+
 /*ESTILOS PARA EL CUADRO TRASERO DE LOGIN Y REGISTER*/
 .cuadro__trasero{
     width: 100%;
@@ -41,6 +43,7 @@
     backdrop-filter: blur(5px);
     background-color: rgba(0, 255, 153, 0.3);
 }
+
 /*ESTILOS DE LOS DIV QUE ESTAN DENTRO DEL DIV CUADRO TRASERO JUNTO CON LOS PARRAFOS Y BOTONES*/
 .cuadro__trasero div{
     margin: 100px 40px;
@@ -90,9 +93,10 @@
     position: relative;
     top: -185px;
     left: 10px;
-    
+
     transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
 }
+
 /*ESTILOS DE FORM Y LOS TEXTOS, INPUT Y BOTONES QUE CONTIENE*/
 .cuadro__login-register form{
     width: 100%;
@@ -125,20 +129,23 @@
     border: none;
     font-size: 14px;
     background: #1cc127;
-    color: white;
+    color: #ffffff;
     cursor: pointer;
     outline: none;
     font-weight: 600;
 }
+
 /*ESTILOS DE LA CLASS FORMULARIOS_LOGIN*/
 .formulario__login{
     opacity: 1;
     display: block;
 }
+
 /*ESTILOS DE LA CLASS FORMULARIOS_REGISTER*/
 .formulario__register{
     display: none;
 }
+
 /*ESTILOS PARA DIV CLASS DE BURBUJAS PAGINA DE INICIO CON SUS SPAN DE TIEMPOS DE ANIMACION Y TRANSICION*/
 .bubbles {
     position: relative;
@@ -165,11 +172,13 @@
     0 0 50px #1f663f,
     0 0 100x #1f663f;
 }
+
 /*ANIMACION DE LA TRANSFORMACION DE BURBUJAS EN ESCALAS*/
 @keyframes animate {
     0% {
         transform: translateY(100vh) scale(0);
     }
+
     100% {
         transform: translateY(5vh) scale(1);
     }
@@ -188,14 +197,14 @@
         flex-direction: column;
         margin: auto;
     }
-
     .cuadro__trasero div{
         margin: 0px;
         position: absolute;
     }
 
+
     /*FORMULARIOS*/
-    
+
     .cuadro__login-register{
         top: -10px;
         left: -5px;
@@ -206,3 +215,18 @@
         position: relative;
     }
 }
+    .boton {
+        display: inline-block; /* Para que parezca un botón */
+        padding: 10px 20px; /* Espaciado interno */
+        font-size: 16px; /* Tamaño del texto */
+        color: white; /* Color del texto */
+        background-color: rgb(38, 255, 0); /* Fondo azul */
+        text-decoration: none; /* Quitar subrayado */
+        border-radius: 5px; /* Bordes redondeados */
+        border: none; /* Sin borde */
+        cursor: pointer; /* Mano al pasar por encima */
+        text-align: center; /* Centrar el texto */
+    }
+    .boton:hover {
+        background-color: rgb(86, 139, 0); /* Color más oscuro al pasar el mouse */
+    }
