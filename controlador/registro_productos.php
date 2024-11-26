@@ -12,7 +12,7 @@ if(!empty($_POST["registrar"])) {
         $vendedor=$_POST["vendedor"];
         $comprador=$_POST["comprador"];
        
-        $sqli=$conexion->query(" insert into inventario(nom_producto, marca, peso, color, tamaño, codigo_barras, vendedor, comprador)values('$nom_producto','$marca','$peso','$color,'$tamaño','$codigo_barras','$vendedor','$comprador') ");
+        $sql=mysqli_query($conexion, " insert into inventario(nom_producto, marca, peso, color, tamaño, codigo_barras, vendedor, comprador)values('$nom_producto','$marca','$peso','$color,'$tamaño','$codigo_barras','$vendedor','$comprador') ");
 
         if ($sql==1) {
             echo '<div class="alert alert-success">PRODUCTO REGISTRADO CORRECTAMENTE</div>';

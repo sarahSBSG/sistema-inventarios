@@ -60,9 +60,9 @@
         <input type="text" class="form-control" placeholder="Color" name="color">
       </div>
   <!--DIV QUE CONTIENE LO MISMO QUE LOS ANTERIORES PERO EN FORMA DE SELECCION-->
-      <div class="mb-3">
-        <label for="disabledSelect" class="form-label" >Tamaño</label>
-        <select id="disabledSelect" class="form-select" name="tamaño">
+        <div class="mb-3">
+        <label for="tamaño" class="form-label" >Tamaño</label>
+        <select id="tamaño" class="form-select" name="tamaño">
           <option></option>
           <option>s (chico)</option>
           <option>m (mediano)</option>
