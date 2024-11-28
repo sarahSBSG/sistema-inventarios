@@ -62,13 +62,7 @@
   <!--DIV QUE CONTIENE LO MISMO QUE LOS ANTERIORES PERO EN FORMA DE SELECCION-->
         <div class="mb-3">
         <label for="tamaño" class="form-label" >Tamaño</label>
-        <select id="tamaño" class="form-select" name="tamaño">
-          <option></option>
-          <option>s (chico)</option>
-          <option>m (mediano)</option>
-          <option>l (grande)</option>
-          <option>xl (extra grande)</option>
-        </select>
+        <input type="text" class="form-control" placeholder="Tamaño" name="tamaño">
       </div>
 
       <div class="mb-3">
@@ -85,7 +79,7 @@
         <label for="disabledTextInput" class="form-label">Comprador</label>
         <input type="text" class="form-control" placeholder="Comprador" name="comprador">
       </div>
-      <button type="submit" class="btn btn-primary" name="registrar" value="ok">Registrar</button>
+      <button type="submit" class="btn btn-primary" name="btnregistrar" value="ok">Registrar</button>
           <ul>
               <!-- BOTÓN PARA "CERRAR SESIÓN" Y "SUBIR" CON SU LINK DE REFERENCIA PARA MANDAR A UNA PAGINA O SECCION ESPEVIFICA CON TIPO DE CLASE COMO UN BOTON-->
               <li>
@@ -95,9 +89,11 @@
 
     <!--CIERRES DE LOS FORM, DIV, BODY Y HTML-->
   </form>
-
+  <!--APARTADO DE ESTILO Y TAMAÑO DE LA TABLA DE REGISTRO DE INVENTARIOS Y CON SU NOMBRE EN CADA COLUMNA-->
   <div class="col-9 p-3">
+    <!--ESTILO DE TABLA PARA QUE AL PASAR EL MOUSSE SE OBSCUREZCA CADA FILA-->
   <table class="table table-hover">
+    <!--HILO DE DATOS QUE CONTIENE LA TABLA-->
   <thead>
     <tr>
       <th scope="col">ID</th>
@@ -113,9 +109,12 @@
     </tr>
   </thead>
   <tbody>
+    <!--CODIGO PHP-->
     <?php
+    //CODIGO PARA MANDAR A LLAMAR LA CARPETA DE CONEXION CON LA BASE DE DATOS, Y LA VARIABLE $SQL HACIENDO UN SELECT LLAMANDO LA TABLE LLAMADA INVENTARIOS
     include "php_inv/conexion.php";
     $sql=$conexion->query(" select * from inventario ");
+    //FUNCION WHILE(SIGNIFICA QUE MIENTRAS SE CUMPLE ESTA INSTRUCCION SE CUMPLIRA LO QUE SE DESIGNO Y EN ESTA PARTE ASIGNA EL OBJETO DEVUELTO POR fetch_object() A LA VARIABLE $datos)
     while($datos=$sql->fetch_object()){ ?>
     <tr>
       <td><?= $datos-> Id?></td>
@@ -127,6 +126,7 @@
       <td><?= $datos-> codigo_barras?></td>
       <td><?= $datos-> vendedor?></td>
       <td><?= $datos-> comprador?></td>
+      <!--ETIQUETA EN DONDE SE LE ASIGNA UN ICONO Y FORMATO A LOS BOTONES DE CADA PRODUCTO AGREGADO PARA EDITAR Y BORRAR-->
       <td>
         <a href="" class="btn btn-small btn-success"><i class="fa-solid fa-pen-to-square"></i></a>
         <a href="" class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>
@@ -135,7 +135,7 @@
     <?php }
     ?>
 
-    
+    <!--CIERRRE DE ETIQUETAS (DIVS, TBODY, TABLE, BODY Y HTML)-->
   </tbody>
 </table>
   </div>
