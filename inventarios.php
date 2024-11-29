@@ -21,6 +21,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--NOMBRE DE COMO APARECERA LA PAGINA WEB-->
     <title>INVENTARIOS</title>
+  <!--PAQUETE DE LA PAGINA DE BOOTSTRAPS ES UN ENLACE A UN ARCHIVO CSS DE BOOTSTRAP QUE SE CARGA DESDE UN CND (Content Delivery Network) Y DARLE EL FORMATO A LA LOS CUADROS DE TEXTO-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <!--SCRIP PARA PODER ELEGIR CUALQUIER ICONO DE EL KIT QUE TENEMOS EN FONTAWESOME-->
     <script src="https://kit.fontawesome.com/d8f04e9fe9.js" crossorigin="anonymous"></script>
@@ -32,9 +33,10 @@
   <!--DIV DEL CONTENEDOR DEL APARTADO DEL REGISTRO DE LOS PRODUCTOS CON UNA CLASE QUE CONTIENE UN EFECTO FLUIDO EN LAS FILAS-->
 <div class="container-fluid row">
     <!--FORM CON UNA CLASE PARA DEFINIR EL ANCHO DEL REGISTRO EN LA PAGINA Y UBICARLO DE LADO IZQUIERDO-->
-  <form class="col-3" method="POST">
+  <form class="col-6 p-3" method="POST">
     <!--LEYENDA DE TEXTO ANTES DEL REGISTRO QUE SEA "PRODUCTOS"-->
-      <h3 class="text-center p-4">PRODUCTOS</h3>
+      <h3 class="text-center alert alert-secondary">PRODUCTOS</h3>
+  <!--SE MANDAN A LLAMAR CARPETAS PARA QUE SE PUEDA TRABAJAR CON ELLAS EN ESTA CARPETA POR MEDIO DE UN CODIGO EN PHP-->
       <?php
       include "php_inv/conexion.php";
       include "controlador/registro_productos.php";
@@ -59,10 +61,15 @@
         <label for="disabledTextInput" class="form-label">Color</label>
         <input type="text" class="form-control" placeholder="Color" name="color">
       </div>
-  <!--DIV QUE CONTIENE LO MISMO QUE LOS ANTERIORES PERO EN FORMA DE SELECCION-->
+
         <div class="mb-3">
         <label for="tamaño" class="form-label" >Tamaño</label>
         <input type="text" class="form-control" placeholder="Tamaño" name="tamaño">
+      </div>
+
+      <div class="mb-3">
+        <label for="cantidad" class="form-label" >Cantidad</label>
+        <input type="text" class="form-control" placeholder="Cantidad" name="cantidad">
       </div>
 
       <div class="mb-3">
@@ -79,6 +86,8 @@
         <label for="disabledTextInput" class="form-label">Comprador</label>
         <input type="text" class="form-control" placeholder="Comprador" name="comprador">
       </div>
+
+  <!--BOTON PARA REGISTRAR CON SU DISEÑO VALOR Y NAME PARA MANDARLO A LLAMAR MAS FACILMENTE-->
       <button type="submit" class="btn btn-primary" name="btnregistrar" value="ok">Registrar</button>
           <ul>
               <!-- BOTÓN PARA "CERRAR SESIÓN" Y "SUBIR" CON SU LINK DE REFERENCIA PARA MANDAR A UNA PAGINA O SECCION ESPEVIFICA CON TIPO DE CLASE COMO UN BOTON-->
@@ -90,7 +99,7 @@
     <!--CIERRES DE LOS FORM, DIV, BODY Y HTML-->
   </form>
   <!--APARTADO DE ESTILO Y TAMAÑO DE LA TABLA DE REGISTRO DE INVENTARIOS Y CON SU NOMBRE EN CADA COLUMNA-->
-  <div class="col-9 p-3">
+  <div class="col-13 p-4">
     <!--ESTILO DE TABLA PARA QUE AL PASAR EL MOUSSE SE OBSCUREZCA CADA FILA-->
   <table class="table table-hover">
     <!--HILO DE DATOS QUE CONTIENE LA TABLA-->
@@ -102,6 +111,7 @@
       <th scope="col">PESO</th>
       <th scope="col">COLOR</th>
       <th scope="col">TAMAÑO</th>
+      <th scope="col">CANTIDAD</th>
       <th scope="col">CODIGO</th>
       <th scope="col">VENDEDOR</th>
       <th scope="col">COMPRADOR</th>
@@ -123,12 +133,13 @@
       <td><?= $datos-> peso?></td>
       <td><?= $datos-> color?></td>
       <td><?= $datos-> tamaño?></td>
+      <td><?= $datos-> cantidad?></td>
       <td><?= $datos-> codigo_barras?></td>
       <td><?= $datos-> vendedor?></td>
       <td><?= $datos-> comprador?></td>
-      <!--ETIQUETA EN DONDE SE LE ASIGNA UN ICONO Y FORMATO A LOS BOTONES DE CADA PRODUCTO AGREGADO PARA EDITAR Y BORRAR-->
+      <!--ETIQUETA EN DONDE SE LE ASIGNA UN ICONO Y FORMATO A LOS BOTONES DE CADA PRODUCTO AGREGADO PARA EDITAR Y BORRAR Y A DONDE DIRIGIRA CADA BOTON-->
       <td>
-        <a href="" class="btn btn-small btn-success"><i class="fa-solid fa-pen-to-square"></i></a>
+        <a href="php_inv/modificar_producto.php?id=<?= $datos-> Id ?>" class="btn btn-small btn-success"><i class="fa-solid fa-pen-to-square"></i></a>
         <a href="" class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>
       </td>
     </tr>
