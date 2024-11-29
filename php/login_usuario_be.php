@@ -21,7 +21,7 @@
     }else{
         echo '
             <script>
-                alert("Falta de datos o estan incorrectos, porfavor verifique los datos introducidos");
+                alert("FALTA DE DATOS O ESTAN INCORRECTOS, PORFAVOR VERIFIQUE LOS DATOS INGRESADOS");
                 window.location = "../index.php";
             </script>
         ';

@@ -20,7 +20,7 @@
         if(mysqli_num_rows($verificar_usuario) > 0){
             echo '
                 <script>
-                    alert("Este usuario ya esta registrado, intenta con otro diferente");
+                    alert("ESTE USUARIO YA ESTA REGISTRADO, INTENTE CON OTRO DIFERENTE");
                     window.location = "../index.php";
                 </script>
             ';
@@ -34,51 +34,56 @@
         if(mysqli_num_rows($verificar_correo) > 0){
             echo '
                 <script>
-                    alert("Este correo ya esta registrado, intenta con otro diferente");
+                    alert("ESTE CORREO YA ESTA REGISTRADO, INTENTE CON ORTO DIFERENTE");
                     window.location = "../index.php";
                 </script>
             ';
             exit();
         }
 
-    //VARIABLE CON LA FUNCION MYSQLI_QUERY PARA PODER TENER ACCESO A VARIABLE $CONEXION 
-    $validar_registro = mysqli_query($conexion, "SELECT * FROM usuarios WHERE nombre_completo='$nombre_completo' and correo='$correo' and usuario='$usuario' and clave='$clave' ");
-
-    //CONDICIONAL PARA QUE CON LA FUNCION MYSQLI_NUM_ROWS SE LEA LAS FILAS,
-    //EN LA VARIABLE VALIDAR_REGISTRO Y ENVIARA DE NUEVO A LA PAGINA DE INICIO SINO SE LLENAN TODOS LOS DATOS REQUERIDOS JUNTO CON UN MENSAJE DE ERROR 
-        if(mysqli_num_rows($validar_registro) > 0){
-            header("location: ../index.php");
-            exit;
-        }else{
+        //VERIFICAR SI LOS CAMPOS SI ESTAN VACIOS
+        if (empty($nombre_completo) || empty($correo) || empty($usuario) || empty($clave)) {
+            //SI ALGUN CAMPO ESTA VACIO, MOSTRAR MENSAJE DE ERROR
             echo '
                 <script>
-                    alert("Los datos estan incompletos, Porfavor llena los datos solicitados");
-                    window.location = "../index.php";
+                    alert("FALTA DE DATOS O ESTAN INCORRECTOS, PORFAVOR VERIFIQUE LOS DATOS INGRESADOS");
+                    //REDIRIGE AL FORMULARIO DE INICIO
+                    window.location = "../index.php"; 
                 </script>
             ';
-            exit();
+            exit(); //TERMINA LA EJECUCION DEL SCRIPT CADA QUE SE COLOCA EL EXIT Y NO SE EJECUTA EL DEMAS CODIGO
+        } else {
+            //SI TODOS LOS CAMPOS TIENEN DATOS, REALIZAR LA CONSULTA PARA VALIDAR SI EL REGISTRO YA EXISTE 
+            $validar_registro = mysqli_query($conexion, "SELECT * FROM usuarios WHERE nombre_completo='$nombre_completo' AND correo='$correo' AND usuario='$usuario' AND clave='$clave'");
+        
+            //SI EL REGISTRO SI EXISTE, REDIRIGE A LA PAGINA DE INICIO
+            if (mysqli_num_rows($validar_registro) > 0) {
+                header("Location: ../index.php");
+                exit();
+            } else {
+                //SI EL REGISTRO NO EXISTE, INSERTAR LOS DATOS EN LA BASE DE DATOS 
+                $insertar = mysqli_query($conexion, "INSERT INTO usuarios (nombre_completo, correo, usuario, clave) VALUES ('$nombre_completo', '$correo', '$usuario', '$clave')");
+        
+                if ($insertar) {
+                    //SI LA INSERCION ES EXITOSA, REDIRIGE A LAGINA DE INICIO Y MUESTRA MENSAJE DE EXITO
+                    echo '
+                        <script>
+                            alert("USUARIO REGISTRADO EXITOSAMENTE");
+                            //REDIRIGE AL FORMULARIO DE INICIO
+                            window.location = "../index.php"; 
+                        </script>
+                    ';
+                } else {
+                    //SI LA INSERCION FALLA MANDA MENSAJE DE ERROR
+                    echo '
+                        <script>
+                            alert("ERROR AL REGISTRAR LOS DATOS, NENTE NUEVAMENTE");
+                            //REDIRIGE AL FORMULARIO DE INICIO
+                            window.location = "../index.php"; 
+                        </script>
+                    ';
+                }
+                exit();
+            }
         }
-
-    //VARIABLE PARA EJECUTAR A LA VARIABLE $QUERY Y LLAMAR A LA $CONEXION 
-    $ejecutar = mysqli_query($conexion, $query);
-
-    //PARA VERIFICAR Y QUE LA PAGINA AVISE QUE SI SE ENVIARON LOS DATOS CORRECTAMENTE
-    if($ejecutar){
-        echo '
-            <script>
-                alert("Usuario almacenado exitosamente");
-                window.location = "../index.php";
-            </script>
-            ';
-    }else{
-        echo '
-            <script>
-                alert("Intentelo de nuevo, usuario no almacenado");
-                window.location = "../index.php";
-            </script>
-        ';
-    }
-
-    //MANDAR DE NUEVO A LA PAGINA DE INICIO
-    mysqli_close($conexion);
 ?>
