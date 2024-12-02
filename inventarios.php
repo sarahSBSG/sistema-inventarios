@@ -36,6 +36,10 @@
   <form class="col-6 p-3" method="POST">
     <!--LEYENDA DE TEXTO ANTES DEL REGISTRO QUE SEA "PRODUCTOS"-->
       <h3 class="text-center alert alert-secondary">PRODUCTOS</h3>
+      <!--CODIGO PHP PARA MOSTRAR MENSAJE DE LA ELIMINACION DEL PRODUCTO-->
+      <?php
+      include "controlador/eliminar_productos.php";
+      ?>
   <!--SE MANDAN A LLAMAR CARPETAS PARA QUE SE PUEDA TRABAJAR CON ELLAS EN ESTA CARPETA POR MEDIO DE UN CODIGO EN PHP-->
       <?php
       include "php_inv/conexion.php";
