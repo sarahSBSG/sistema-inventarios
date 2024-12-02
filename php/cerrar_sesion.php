@@ -1,3 +1,4 @@
+<!--INICIO DE CODIGO PHP-->
 <?php
     //INICIALIZAR LA SESION
     session_start();

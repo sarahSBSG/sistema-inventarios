@@ -1,31 +1,42 @@
+<!--ONOCIO DE CODIGO DE PHP-->
 <?php
+//INCLUYPO EN ESTE ARCHIVO DE LA CARPETA PHP_INV EL ARCHIVO DE CONEXION.PHP Y PODERLO MANDAR A LLAMAR
 include "../php_inv/conexion.php";
-
+//VARIABLE ID EB DONDE ALMACENE EL ID DE LOS RODUCTOS 
 $id=$_GET["id"];
-
+//CONSULTA A LA BASE DE DATOS CON UNA VARIABLE $SQL QUE ALCANECA TODO LO SIGUIENTE LLAMANDO A LA VARIABLE CONEXION POR MEDIO DE UN 
+//QUERY HACIENDO UN SELECT DE LA TABLA INVENTARIO DONDE EL ID SERA IGUAL A LA VARIABLE ID QUE RECIEN CREE
 $sql=$conexion->query(" Select * from inventario where id=$id ");
 
 ?>
-
+<!--CODIGO HTML PARA PODER COPIAR EXACTAMENTE LO MISMO DEL APARTADO DE REGISTRO DE PRODUCTOS-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--NOMBRE COMO APARECERA LA PESTAÑA DE LA PAGINA-->
     <title>MODIFICAR PRODUCTOS</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!--PAQUETE DE LA PAGINA DE BOOTSTRAPS ES UN ENLACE A UN ARCHIVO CSS DE BOOTSTRAP QUE SE CARGA DESDE UN CND (Content Delivery Network) Y DARLE EL FORMATO A LA LOS CUADROS DE TEXTO-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
+<!--FORM CON UNA CLASE PARA DEFINIR EL ANCHO DEL REGISTRO EN LA PAGINA Y UBICARLO DE LADO IZQUIERDO-->
 <form class="col-6 p-4 m-auto" method="POST">
-    <!--LEYENDA DE TEXTO ANTES DEL REGISTRO QUE SEA "PRODUCTOS"-->
-      <h3 class="text-center alert alert-secondary">MODIFICAR PRODUCTOS</h3>
+    <!--LEYENDA DE TEXTO ANTES DEL REGISTRO QUE SEA "MODIFICAR PRODUCTOS" Y QUE EL TEXTO ESTE CENTRADO-->
+    <h3 class="text-center alert alert-secondary">MODIFICAR PRODUCTOS</h3>
+    <!--INPUT CON LOS SIQUIENTES ATRIBUTOS- TIPO HIDDEN PARA QUE NO SEA VISIBLE PER SIGA EXISTIENDO, NAME DEL ID Y EL VALOR CON EL QUE RECOJO EL ID OBTENIENDOLO POR UN GET-->
     <input type="hidden" name="id" value="<?= $_GET["id"] ?>">
     <?php
+    //AQUI MANDAMOS A LLAMAR A AL ARCHIVO MODIFICAR_PRODUCTO QUE ESTA EN LA CARPETA CONTROLADOR PARA QUE AL APRETAR EL BOTON REALIZE LO QUE STA EN  ARCHIVO
     include "../controlador/modificar_producto.php";
+    //PARA RECORRER TODOS LOS DATOS SE MUESTRA POR MEDIO DE UN WHILE CREANDO UNA VARIABLE LLAMADA $DATOS QUE MIENTRAS EN $SQL EXISTAN DATOS LOS ALMACENARA Y PARA MOSTRARLO AL FINAL 
+    //SE ABRE EL INICIO DE CODIGO PHP
     while ($datos=$sql->fetch_object()) {?>
       <!--DIVS PARA DEFINIR LOS RECUADROS DEL REGISTRO, CON SU FORMATO, CLASE, TIPO QUE SEA DE TEXTO Y CON SU NAME DENTRO DE UN LABEL E INPUT-->
       <div class="mb-3">
         <label for="disabledTextInput" class="form-label">Nombre del Producto</label>
+        <!--EN EL ATRIBUTO VALUE Y DENTRO DE LOS SIMBOLOS DE PHP MANDAMOS A LLAMAR LA VARIABLE $DATOS PARA MOSTRAR EL NAME DE CADA RECUADRO DE TEXTO Y ASI SUCESIVAMENTE CON TODOS LOS RECUADROS-->
         <input type="text" class="form-control" placeholder="Nombre" name="nom_producto" value="<?= $datos->nom_producto ?>">
       </div>
 
@@ -71,7 +82,7 @@ $sql=$conexion->query(" Select * from inventario where id=$id ");
     <?php }
 
     ?>      
-
+      <!--BOTON PARA QUE AL MODIFICAR REGRESE A LA PAGINA DE REGISTRO Y SUS OTROS ATRIBUTAOS COMO EL TIPO, CLASE PARA DEFINIR SU ESTILO Y SU NAME-->
       <button type="submit" class="btn btn-primary" name="btnregistrar" value="ok">Modificar Producto</button>
           <ul>
               <!-- BOTÓN PARA "CERRAR SESIÓN" Y "SUBIR" CON SU LINK DE REFERENCIA PARA MANDAR A UNA PAGINA O SECCION ESPEVIFICA CON TIPO DE CLASE COMO UN BOTON-->

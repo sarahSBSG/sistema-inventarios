@@ -17,7 +17,7 @@ if(!empty($_POST["btnregistrar"])) {
         $sql = $conexion->query("INSERT INTO inventario (nom_producto, marca, peso, color, tamaño, cantidad, codigo_barras, vendedor, comprador) 
         VALUES ('$nom_producto', '$marca', '$peso', '$color', '$tamaño', '$cantidad', '$codigo_barras', '$vendedor', '$comprador')");
         //CONDICION PARA QUE SE LLAME $SQL Y SEA EN INCREMENTO Y QUE SE MANDE UN MENSAJE EN CUANDO SE REGISTRE CORRECTAMENTE LOS DATOS
-        //Y SI ES EL CASO CONTRARIO UN MENSAJE DE ERROR CON ALERTAS  EL MENSAJE DE COLOR YA SEA VERDE O ROJO
+        //Y SI ES EL CASO CONTRARIO UN MENSAJE DE ERROR CON ALERTAS EL MENSAJE DE COLOR YA SEA VERDE O ROJO DE CADA CONDICION 
         if ($sql==1) {
             echo '<div class="alert alert-success">PRODUCTO REGISTRADO CORRECTAMENTE</div>';
         } else {

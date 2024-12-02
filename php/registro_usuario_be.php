@@ -16,7 +16,7 @@
         //VARIABLE VERIFICAR QUE EL USUARIO NO SE REPITA EN LA BASE DE DATOS DEL ARCHIVO CONEXION_BE.PHP
         $verificar_usuario = mysqli_query($conexion, "SELECT * FROM usuarios WHERE usuario='$usuario' ");
 
-        //SI ENCUENTRA UNA FILA EN LA VARIABLE VERIFICAR_CORREO ENVIARA UN MENSAJE DE ERROR Y REGRESE A PAGINA DE INICIO
+        //SI ENCUENTRA UNA FILA EN LA VARIABLE VERIFICAR_CORREO ENVIARA UN MENSAJE DE ERROR Y REGRESE A PAGINA DE INICIO Y TERMINA EL SCRIPT CON UN EXIT PARA NO LEER DEMAS CODIGO
         if(mysqli_num_rows($verificar_usuario) > 0){
             echo '
                 <script>
@@ -30,7 +30,7 @@
         //VARIABLE VERIFICAR QUE EL CORREO NO SE REPITA EN LA BASE DE DATOS DEL ARCHIVO CONEXION_BE.PHP
         $verificar_correo = mysqli_query($conexion, "SELECT * FROM usuarios WHERE correo='$correo' ");
 
-        //SI ENCUENTRA UNA FILA EN LA VARIABLE VERIFICAR_CORREO ENVIARA UN MENSAJE DE ERROR Y REGRESE A PAGINA DE INICIO
+        //SI ENCUENTRA UNA FILA EN LA VARIABLE VERIFICAR_CORREO ENVIARA UN MENSAJE DE ERROR Y REGRESE A PAGINA DE INICIO Y TERMINA EL SCRIPT CON UN EXIT PARA NO LEER DEMAS CODIGO
         if(mysqli_num_rows($verificar_correo) > 0){
             echo '
                 <script>
@@ -43,7 +43,7 @@
 
         //VERIFICAR SI LOS CAMPOS SI ESTAN VACIOS
         if (empty($nombre_completo) || empty($correo) || empty($usuario) || empty($clave)) {
-            //SI ALGUN CAMPO ESTA VACIO, MOSTRAR MENSAJE DE ERROR
+            //SI ALGUN CAMPO ESTA VACIO, MOSTRAR MENSAJE DE ERROR Y TERMINA EL SCRIPT CON UN EXIT PARA NO LEER DEMAS CODIGO
             echo '
                 <script>
                     alert("FALTA DE DATOS O ESTAN INCORRECTOS, PORFAVOR VERIFIQUE LOS DATOS INGRESADOS");
@@ -56,7 +56,7 @@
             //SI TODOS LOS CAMPOS TIENEN DATOS, REALIZAR LA CONSULTA PARA VALIDAR SI EL REGISTRO YA EXISTE 
             $validar_registro = mysqli_query($conexion, "SELECT * FROM usuarios WHERE nombre_completo='$nombre_completo' AND correo='$correo' AND usuario='$usuario' AND clave='$clave'");
         
-            //SI EL REGISTRO SI EXISTE, REDIRIGE A LA PAGINA DE INICIO
+            //SI EL REGISTRO SI EXISTE, REDIRIGE A LA PAGINA DE INICIO Y TERMINA EL SCRIPT CON UN EXIT PARA NO LEER DEMAS CODIGO
             if (mysqli_num_rows($validar_registro) > 0) {
                 header("Location: ../index.php");
                 exit();
@@ -73,8 +73,9 @@
                             window.location = "../index.php"; 
                         </script>
                     ';
+                //SI LA INSERCION FALLA MANDA MENSAJE DE ERROR Y TERMINA EL SCRIPT CON UN EXIT PARA NO LEER DEMAS CODIGO
                 } else {
-                    //SI LA INSERCION FALLA MANDA MENSAJE DE ERROR
+
                     echo '
                         <script>
                             alert("ERROR AL REGISTRAR LOS DATOS, NENTE NUEVAMENTE");

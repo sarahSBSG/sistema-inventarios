@@ -1,3 +1,4 @@
+<!--INICIO DE CODIGO PHP-->
 <?php
     //VARIABLE DE CONEXION CON MYSQL DE PHPMYADMIN DE FORMA LOCAL CON NOMBRE ROOT SIN CONTRASEÑA
     $conexion = mysqli_connect("localhost", "root", "", "login_register_db");
