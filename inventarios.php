@@ -91,16 +91,19 @@
         <input type="text" class="form-control" placeholder="Comprador" name="comprador">
       </div>
 
-  <!--BOTON PARA REGISTRAR CON SU DISEÑO VALOR Y NAME PARA MANDARLO A LLAMAR MAS FACILMENTE-->
-      <button type="submit" class="btn btn-primary" name="btnregistrar" value="ok">Registrar</button>
-          <ul>
-              <!-- BOTÓN PARA "CERRAR SESIÓN" Y "SUBIR" CON SU LINK DE REFERENCIA PARA MANDAR A UNA PAGINA O SECCION ESPEVIFICA CON TIPO DE CLASE COMO UN BOTON-->
-              <li>
-                  <a href="php/cerrar_sesion.php" class="boton">Cerrar Sesión</a>
-              </li>
-          </ul>
+      <!--CONTENEDOR PARA LOS BOTONES CON SU ESTILO, Y SUS ATRIBUTOS REEDIRECCIONANDO A LA CARPETA PARA QUE REALICE LA ACTIVIDAD QUE SE LE DENOMINE-->
+      <div class="row d-flex justify-content-center">
+        <div class="col-3 mb-9">
+          <button type="submit" class="btn btn-success" name="btnregistrar" value="ok">Registrar</button>
+      </div>
 
-    <!--CIERRES DE LOS FORM, DIV, BODY Y HTML-->
+
+        <div class="col-3 mb-9">
+          <a href="php/cerrar_sesion.php" class="btn btn-success" name="btncerrarsesion" value="ok">Cerrar Sesión</a>
+      </div>
+      </div>
+
+  <!--CIERRES DE LOS FORM, DIV, BODY Y HTML-->
   </form>
   <!--APARTADO DE ESTILO Y TAMAÑO DE LA TABLA DE REGISTRO DE INVENTARIOS Y CON SU NOMBRE EN CADA COLUMNA-->
   <div class="col-13 p-4">

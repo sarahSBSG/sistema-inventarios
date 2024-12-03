@@ -215,18 +215,4 @@ body {
         position: relative;
     }
 }
-    .boton {
-        display: inline-block; /* Para que parezca un botón */
-        padding: 10px 20px; /* Espaciado interno */
-        font-size: 16px; /* Tamaño del texto */
-        color: white; /* Color del texto */
-        background-color: rgb(38, 255, 0); /* Fondo azul */
-        text-decoration: none; /* Quitar subrayado */
-        border-radius: 5px; /* Bordes redondeados */
-        border: none; /* Sin borde */
-        cursor: pointer; /* Mano al pasar por encima */
-        text-align: center; /* Centrar el texto */
-    }
-    .boton:hover {
-        background-color: rgb(86, 139, 0); /* Color más oscuro al pasar el mouse */
-    }
+
