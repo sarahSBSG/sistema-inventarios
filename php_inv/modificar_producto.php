@@ -19,6 +19,8 @@ $sql=$conexion->query(" Select * from inventario where id=$id ");
     <title>MODIFICAR PRODUCTOS</title>
   <!--PAQUETE DE LA PAGINA DE BOOTSTRAPS ES UN ENLACE A UN ARCHIVO CSS DE BOOTSTRAP QUE SE CARGA DESDE UN CND (Content Delivery Network) Y DARLE EL FORMATO A LA LOS CUADROS DE TEXTO-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!--MANDO A LLAMAR A LA CARPETA DE LOS ESTILOS PARA PONER DISEÑO A LA PAGINA DE MODIFICAR LOS PRODUCTOS--> 
+  <link rel="stylesheet" href="../formats/css/estilos_inv_mod.css">
 </head>
 <body>
 <!--FORM CON UNA CLASE PARA DEFINIR EL ANCHO DEL REGISTRO EN LA PAGINA Y UBICARLO DE LADO IZQUIERDO-->
@@ -82,16 +84,18 @@ $sql=$conexion->query(" Select * from inventario where id=$id ");
     <?php }
 
     ?>      
-      <!--BOTON PARA QUE AL MODIFICAR REGRESE A LA PAGINA DE REGISTRO Y SUS OTROS ATRIBUTAOS COMO EL TIPO, CLASE PARA DEFINIR SU ESTILO Y SU NAME-->
-      <button type="submit" class="btn btn-primary" name="btnregistrar" value="ok">Modificar Producto</button>
-          <ul>
-              <!-- BOTÓN PARA "CERRAR SESIÓN" Y "SUBIR" CON SU LINK DE REFERENCIA PARA MANDAR A UNA PAGINA O SECCION ESPEVIFICA CON TIPO DE CLASE COMO UN BOTON-->
-              <li>
-                  <a href="php/cerrar_sesion.php" class="boton">Cerrar Sesión</a>
-              </li>
-          </ul>
+      <!--CONTENEDOR PARA LOS BOTONES CON SU ESTILO, Y SUS ATRIBUTOS REEDIRECCIONANDO A LA CARPETA PARA QUE REALICE LA ACTIVIDAD QUE SE LE DENOMINE-->
+      <div class="row d-flex justify-content-center">
+        <div class="col-5 mb-9">
+        <button type="submit" class="btn btn-success" name="btnregistrar" value="ok">Modificar Producto</button>
+      </div>
 
-    <!--CIERRES DE LOS FORM, DIV, BODY Y HTML-->
-  </form>
+      <div class="col-3 mb-9">
+        <a href="../inventarios.php" class="btn btn-success" name="btncerrarsesion" value="ok">Regresar</a>
+      </div>
+      </div>
+
+<!--CIERRES DE LOS FORM, DIV, BODY Y HTML-->
+</form>
 </body>
 </html>

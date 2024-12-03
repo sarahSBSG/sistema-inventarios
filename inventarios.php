@@ -6,7 +6,7 @@
     if(!isset($_SESSION['usuario'])){
         echo '
             <script>
-                alert("Porfavor debes iniciar sesion");
+                alert("PORFAVOR, DEBES INICIAR SESION");
             </script>
         ';
         session_destroy();
@@ -147,7 +147,7 @@
       <!--ETIQUETA EN DONDE SE LE ASIGNA UN ICONO Y FORMATO A LOS BOTONES DE CADA PRODUCTO AGREGADO PARA EDITAR Y BORRAR Y A DONDE DIRIGIRA CADA BOTON-->
       <td>
         <a href="php_inv/modificar_producto.php?id=<?= $datos-> Id ?>" class="btn btn-small btn-success"><i class="fa-solid fa-pen-to-square"></i></a>
-        <a href="" class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>
+        <a href="../controlador/eliminar_productos.php?id=<?= $datos-> Id?>" class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>
       </td>
     </tr>
     <?php }
