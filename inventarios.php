@@ -30,6 +30,12 @@
 </head>
 <!--CUERPO DE LA PAGINA-->
 <body>
+  <script>
+    function eliminar(){
+      var respuesta=confirm("¿ESTAS SEGURO QUE QUIERES ELIMINAR ESTE RPODUCTO?");
+      return respuesta
+    }
+  </script>
   <!--DIV DEL CONTENEDOR DEL APARTADO DEL REGISTRO DE LOS PRODUCTOS CON UNA CLASE QUE CONTIENE UN EFECTO FLUIDO EN LAS FILAS-->
 <div class="container-fluid row">
     <!--FORM CON UNA CLASE PARA DEFINIR EL ANCHO DEL REGISTRO EN LA PAGINA Y UBICARLO DE LADO IZQUIERDO-->
@@ -147,7 +153,8 @@
       <!--ETIQUETA EN DONDE SE LE ASIGNA UN ICONO Y FORMATO A LOS BOTONES DE CADA PRODUCTO AGREGADO PARA EDITAR Y BORRAR Y A DONDE DIRIGIRA CADA BOTON-->
       <td>
         <a href="php_inv/modificar_producto.php?id=<?= $datos-> Id ?>" class="btn btn-small btn-success"><i class="fa-solid fa-pen-to-square"></i></a>
-        <a href="../controlador/eliminar_productos.php?id=<?= $datos-> Id?>" class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>
+        <!--ATRIBUTOS QUE SE LES DESIGNA AL BOTON DE ELIMINAR PRODUCTO, QUE ANTES DE QUE ELIIMINE EL PRUODUCTO RETORNE CON ONCLICK Y ENVIE A LA MISMA PAGINA AL DAR CLICK JUNTO CON SUS ESTILOS DE BOTON-->
+        <a onclick="return eliminar()" href="inventarios.php?id=<?= $datos-> Id ?>" class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>
       </td>
     </tr>
     <?php }
