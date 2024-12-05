@@ -32,7 +32,7 @@
 <body>
   <script>
     function eliminar(){
-      var respuesta=confirm("¿ESTAS SEGURO QUE QUIERES ELIMINAR ESTE RPODUCTO?");
+      var respuesta=confirm("¿ESTAS SEGURO QUE QUIERES ELIMINAR ESTE PRODUCTO?");
       return respuesta
     }
   </script>
