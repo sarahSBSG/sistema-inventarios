@@ -72,7 +72,7 @@
         <input type="text" class="form-control" placeholder="Color" name="color">
       </div>
 
-        <div class="mb-3">
+      <div class="mb-3">
         <label for="tamaño" class="form-label" >Tamaño</label>
         <input type="text" class="form-control" placeholder="Tamaño" name="tamaño">
       </div>
@@ -101,12 +101,12 @@
       <div class="row d-flex justify-content-center">
         <div class="col-3 mb-9">
           <button type="submit" class="btn btn-success" name="btnregistrar" value="ok">Registrar</button>
-      </div>
+        </div>
 
 
         <div class="col-3 mb-9">
           <a href="php/cerrar_sesion.php" class="btn btn-success" name="btncerrarsesion" value="ok">Cerrar Sesión</a>
-      </div>
+        </div>
       </div>
 
   <!--CIERRES DE LOS FORM, DIV, BODY Y HTML-->
@@ -162,10 +162,11 @@
 
     <!--CIERRRE DE ETIQUETAS (DIVS, TBODY, TABLE, BODY Y HTML)-->
   </tbody>
-</table>
+  </table>
   </div>
 
 </div>
+
 </body>
 </html>
 
