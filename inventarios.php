@@ -175,8 +175,14 @@
           <i class="fas fa-user"></i>
         </div>
         <div class="msg-header">
-          <p>Hola, Puedo ayudarte en algo?gytrfdresdtfgvbhjjmnb hytredsvb nmkijmuyhtgrfedcfgvbhj</p>
+          <p>Hola, Puedo ayudarte en algo?</p>
         </div>
+      </div>
+    </div>
+    <div class="typing-field">
+      <div class="input-data">
+          <input type="text" placeholder="Escribe algo aqui..">
+          <button>Enviar</button>
       </div>
     </div>
 </div>
