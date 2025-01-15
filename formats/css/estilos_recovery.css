@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    /*FORMATO DE LA LETRA DE LA PAGINA*/
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #1f7129;
+    background-position: center;
+    /*SE ADAPTA A TODA LA PAGINA*/
+    background-attachment: fixed;
+}
+
+/*ESTILOS DE TODA LA PAGINA*/
+.container{
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/*ESTILOS DE INFORMACION Y CUADROS DE FONDO PARA LA MISMA INFORMACION*/
+.contenedor__todo{
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+
+}
+
+/*ESTILOS PARA EL CUADRO TRASERO DE LOGIN Y REGISTER*/
+.cuadro__trasero{
+    width: 100%;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 255, 153, 0.3);
+}
+
+/*ESTILOS DE LOS DIV QUE ESTAN DENTRO DEL DIV CUADRO TRASERO JUNTO CON LOS PARRAFOS Y BOTONES*/
+.cuadro__trasero div{
+    margin: 100px 40px;
+    color: white;
+    /*EFECTO DE MOVIMIENTO DEL CUADRO*/
+    transition: all 500ms;
+}
+
+.cuadro__trasero div p,
+.cuadro__trasero div button{
+    margin-top: 30px;
+}
+
+.cuadro__trasero div h3{
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.cuadro__trasero div p{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.cuadro__trasero button{
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    transition: all 300ms;
+}
+
+.cuadro__trasero button:hover{
+    background: #fff;
+    color: #1cc127;
+}
+
+/*ESTILOS DE FORMULARIOS LOGIN Y REGISTER SITUADO EN INDEX*/
+.cuadro__login-register{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    top: -185px;
+    left: 10px;
+
+    transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.cuadro__login-register a{
+    display: block; /* Asegura que el enlace sea un bloque separado */
+    margin-top: 10px; /* Ajusta el espacio superior según sea necesario */
+    text-decoration: none; /* Opcional: elimina el subrayado */
+    color: #15612a; /* Opcional: define el color del enlace */
+}
+
+/*ESTILOS DE FORM Y LOS TEXTOS, INPUT Y BOTONES QUE CONTIENE*/
+.cuadro__login-register form{
+    width: 100%;
+    padding: 80px 20px;
+    background: #fff;
+    position: absolute;
+    border-radius: 20px;
+}    
+
+.cuadro__login-register form h2{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #16531d;
+}
+
+.cuadro__login-register form input{
+    width: 100%;
+    margin-top: 20px;
+    padding: 5px;
+    border: none;
+    background: #F2F2F2;
+    font-size: 16px;
+    outline: none;
+}
+
+.cuadro__login-register form button{
+    padding: 10px 40px;
+    margin-top: 30px;
+    border: none;
+    font-size: 14px;
+    background: #1cc127;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    font-weight: 600;
+}
+
+/*ESTILOS DE LA CLASS FORMULARIOS_LOGIN*/
+.formulario__login{
+    opacity: 1;
+    display: block;
+}
+
+/*ESTILOS DE LA CLASS FORMULARIOS_REGISTER*/
+.formulario__register{
+    display: none;
+}
+
+/*ESTILOS PARA DIV CLASS DE BURBUJAS PAGINA DE INICIO CON SUS SPAN DE TIEMPOS DE ANIMACION Y TRANSICION*/
+.bubbles {
+    position: relative;
+    display: flex;
+}
+
+.bubbles span {
+    position: relative;
+    width: 100px;
+    height: 50px;
+    background: #52d78e;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+    0 0 50px #52d78e,
+    0 0 100px #52d78e;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+    background: #1f663f;
+    box-shadow: 0 0 0 10px #ff2d7544,
+    0 0 50px #1f663f,
+    0 0 100x #1f663f;
+}
+
+/*ANIMACION DE LA TRANSFORMACION DE BURBUJAS EN ESCALAS*/
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+
+    100% {
+        transform: translateY(5vh) scale(1);
+    }
+}
+
+/*APARTADO DE RESPONSIVE DESIGN*/
+
+@media screen and (max-width: 850px){
+    main{
+        margin-top: 50px;
+    }
+
+    .cuadro__trasero{
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+    .cuadro__trasero div{
+        margin: 0px;
+        position: absolute;
+    }
+
+
+    /*FORMULARIOS*/
+
+    .cuadro__login-register{
+        top: -10px;
+        left: -5px;
+        margin: auto;
+    }
+
+    .cuadro__login-register form{
+        position: relative;
+    }
+}
+

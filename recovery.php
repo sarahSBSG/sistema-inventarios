@@ -18,7 +18,7 @@
 <!--NOMBRE DE COMO APARECERA LA PAGINA WEB-->
     <title>GREEN</title>
 <!--PARA VINCULAR LOS ESTILOS DEL APARTADO ESTILOS.CSS-->
-    <link rel="stylesheet" href="formats/css/estilos.css">
+    <link rel="stylesheet" href="formats/css/estilos_recovery.css">
 </head>
 <!--CUERPO DE LA PAGINA-->
 <body>
@@ -52,34 +52,16 @@
     <div class="contenedor__todo">
         <div class="cuadro__trasero">
             <div class="cuadro__trasero-login">
-                <h3>¿Ya tienes una cuenta?</h3>
-                <p>Inicia sesión para entrar en la pagina</p>
-                <button id="btn__iniciar-sesion">Iniciar Sesión</button>    
-            </div>
-            <div class="cuadro__trasero-registrar">
-                <h3>¿Aun no tienes una cuenta?</h3>
-                <p>Regístrate para que púedas iniciar sesión</p>
-                <button id="btn__registrar">Regístrarse</button>    
             </div>
         </div>
             <!--FORMULARIO DE LOGIN  REGISTER-->
             <div class="cuadro__login-register">
                 <!--LOGIN-->
                 <form action="php/login_usuario_be.php" method="POST" class="formulario__login">
-                    <h2>Iniciar Sesión</h2>
+                    <h2>Recuperar contraseña</h2>
                     <input type="text" placeholder="Correo Electronico" name="correo">
-                    <input type="password" placeholder="Contraseña" name="clave"> 
                     <a href="recovery.php">¿Olvidaste la contraseña?</a>
-                    <button>Iniciar sesión</button>
-                </form>
-                <!--REGISTRAR-->
-                <form action="php/registro_usuario_be.php" method="POST" class="formulario__register">
-                    <h2>Registrarse</h2>
-                    <input type="text" placeholder="Nombre Completo" name="nombre_completo">
-                    <input type="text" placeholder="Correo Electronico" name="correo">
-                    <input type="text" placeholder="Usuario" name="usuario">
-                    <input type="password" placeholder="Contraseña" name="clave"> 
-                    <button>Registrarse</button>
+                    <button>Enviar email</button>
                 </form>
             </div>
     </div>
