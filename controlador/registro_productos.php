@@ -13,22 +13,31 @@ if(!empty($_POST["btnregistrar"])) {
         $codigo_barras=$_POST["codigo_barras"];
         $vendedor=$_POST["vendedor"];
         $comprador=$_POST["comprador"];
+        $fecha=$_POST["fecha"];
         //VARIABLE $SQL QUE MANDA A LLAMAR LA VARIABLE $CONEXION Y LA INSERSION DE DATOS EN LA TABLA Y LA BASE DE DATOS
-        $sql = $conexion->query("INSERT INTO inventario (nom_producto, marca, peso, color, tamaño, cantidad, codigo_barras, vendedor, comprador) 
-        VALUES ('$nom_producto', '$marca', '$peso', '$color', '$tamaño', '$cantidad', '$codigo_barras', '$vendedor', '$comprador')");
+        $sql = $conexion->query("INSERT INTO inventario (nom_producto, marca, peso, color, tamaño, cantidad, codigo_barras, vendedor, comprador, fecha) 
+        VALUES ('$nom_producto', '$marca', '$peso', '$color', '$tamaño', '$cantidad', '$codigo_barras', '$vendedor', '$comprador', '$fecha')");
         //CONDICION PARA QUE SE LLAME $SQL Y SEA EN INCREMENTO Y QUE SE MANDE UN MENSAJE EN CUANDO SE REGISTRE CORRECTAMENTE LOS DATOS
         //Y SI ES EL CASO CONTRARIO UN MENSAJE DE ERROR CON ALERTAS EL MENSAJE DE COLOR YA SEA VERDE O ROJO DE CADA CONDICION 
         if ($sql==1) {
-            echo '<div class="alert alert-success">PRODUCTO REGISTRADO CORRECTAMENTE</div>';
+            echo '<div class="alert alert-primary">PRODUCTO REGISTRADO CORRECTAMENTE</div>';
         } else {
             echo '<div class="alert alert-danger">ERROR AL REGISTRAR PRODUCTO</div>';
 
         }
 
     } else {
-            echo '<div class="alert alert-success">ALGUNO DE LOS CAMPOS ESTA VACIO</div>';
+            echo '<div class="alert alert-danger">ALGUNO DE LOS CAMPOS ESTA VACIO</div>';
     }
-    
+
 }
 
 ?>
+
+<!-- SCRIPT PARA OCULTAR ALERTAS AUTOMÁTICAMENTE EN 3 SEGUNDOS-->
+<script>
+    setTimeout(function() {
+        const alerts = document.querySelectorAll('.alert');
+        alerts.forEach(alert => alert.style.display = 'none');
+    }, 3000);
+</script>

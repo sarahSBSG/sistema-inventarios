@@ -30,31 +30,35 @@
 </head>
 <!--CUERPO DE LA PAGINA-->
 <body>
+    <!-- SCRIPT QUE LLAMA LA FUNCION ELIMINAR Y PREGUNTA ANTES SI SE LIMINA UN PRODUCTO -->  
   <script>
     function eliminar(){
       var respuesta=confirm("¿ESTAS SEGURO QUE QUIERES ELIMINAR ESTE PRODUCTO?");
       return respuesta
     }
   </script>
-        <h3 class="text-center alert alert-primary">PRODUCTOS</h3>
-  <!--DIV DEL CONTENEDOR DEL APARTADO DEL REGISTRO DE LOS PRODUCTOS CON UNA CLASE QUE CONTIENE UN EFECTO FLUIDO EN LAS FILAS-->
-<div class="container-fluid row">
-    <!--FORM CON UNA CLASE PARA DEFINIR EL ANCHO DEL REGISTRO EN LA PAGINA Y UBICARLO DE LADO IZQUIERDO-->
-  <form class="col-5 p-3" method="POST">
-    <!--LEYENDA DE TEXTO ANTES DEL REGISTRO QUE SEA "PRODUCTOS"-->
-      <h3 class="text-center alert alert-secondary">LIMPIEZA</h3>
-      <!--CODIGO PHP PARA MOSTRAR MENSAJE DE LA ELIMINACION DEL PRODUCTO-->
+  <!--ESTILO DE TITULO PRINCIPAL DE INVENTARIOS-->
+<h3 class="text-center" style="font-size: 2.0rem; color:rgb(0, 0, 0); background-color:rgb(158, 222, 176); padding: 10px; border-radius: 5px; border: 1px solid rgb(255,255,255);">INGRESO DE PRODUCTOS</h3>
+<!--DIV DEL CONTENEDOR DEL APARTADO DEL REGISTRO DE LOS PRODUCTOS CON UNA CLASE QUE CONTIENE UN EFECTO FLUIDO EN LAS FILAS-->
+
+<div class="container-fluid">
+  <div class="row">
+
+
+
+    <!-- PRIMER FORMULARIO -->
+    <form class="col-md-6 p-3" method="POST">
+    <h3 class="text-center" style="font-size: 2.0rem; color:rgb(0, 0, 0); background-color:rgb(158, 222, 176); padding: 10px; border-radius: 5px; border: 1px solid rgb(255,255,255);">LIMPIEZA</h3>
+          <!-- MANDANDO A LLAMAR LOS CONTROLADORES Y CARTEPAS INCLUYENDOLOS EN ESTA CLASE -->
       <?php
       include "controlador/eliminar_productos.php";
-      ?>
-  <!--SE MANDAN A LLAMAR CARPETAS PARA QUE SE PUEDA TRABAJAR CON ELLAS EN ESTA CARPETA POR MEDIO DE UN CODIGO EN PHP-->
-      <?php
+      
       include "php_inv/conexion.php";
       include "controlador/registro_productos.php";
       ?>
-  <!--DIVS PARA DEFINIR LOS RECUADROS DEL REGISTRO, CON SU FORMATO, CLASE, TIPO QUE SEA DE TEXTO Y CON SU NAME DENTRO DE UN LABEL E INPUT-->
-      <div class="mb-3">
-        <label for="disabledTextInput" class="form-label">Nombre del Producto</label>
+          <!-- CUADRO DE TEXTOS CON SU ESTILO, NAME, TIPO DE RECUADRO Y NOMBRE QUE APARECE EN EL RECUADRO  -->
+          <div class="mb-3">
+        <label class="form-label">Nombre del Producto</label>
         <input type="text" class="form-control" placeholder="Nombre" name="nom_producto">
       </div>
 
@@ -98,55 +102,53 @@
         <input type="text" class="form-control" placeholder="Comprador" name="comprador">
       </div>
 
-      <!--CONTENEDOR PARA LOS BOTONES CON SU ESTILO, Y SUS ATRIBUTOS REEDIRECCIONANDO A LA CARPETA PARA QUE REALICE LA ACTIVIDAD QUE SE LE DENOMINE-->
+      <div class="mb-3">
+        <label for="disabledTextInput" class="form-label">Fecha</label>
+        <input type="date" class="form-control" placeholder="Fecha" name="fecha">
+      </div>
+
       <div class="row d-flex justify-content-center">
-        <div class="col-5 mb-9">
+        <div class="col-5">
           <button type="submit" class="btn btn-success" name="btnregistrar" value="ok">Registrar</button>
         </div>
-
-
-        <div class="col-4 mb-9">
+        <div class="col-4">
           <a href="php/cerrar_sesion.php" class="btn btn-success" name="btncerrarsesion" value="ok">Cerrar Sesión</a>
         </div>
       </div>
+    
+    
+    </form>
 
-  <!--CIERRES DE LOS FORM, DIV, BODY Y HTML-->
-  </form>
-
-    <!--CODIGO PHP-->
+    
     <?php
     //CODIGO PARA MANDAR A LLAMAR LA CARPETA DE CONEXION CON LA BASE DE DATOS, Y LA VARIABLE $SQL HACIENDO UN SELECT LLAMANDO LA TABLE LLAMADA INVENTARIOS
     include "php_inv/conexion.php";
     $sql=$conexion->query(" select * from inventario ");
+
     
+
+
+
+    
+
     ?>
-<!--CIERRE DE DIV, BODY Y HTML-->
-</div>
 
 
 
-
-
-
-
-  <!--DIV DEL CONTENEDOR DEL APARTADO DEL REGISTRO DE LOS PRODUCTOS CON UNA CLASE QUE CONTIENE UN EFECTO FLUIDO EN LAS FILAS-->
-  <div class="container-fluid row">
-    <!--FORM CON UNA CLASE PARA DEFINIR EL ANCHO DEL REGISTRO EN LA PAGINA Y UBICARLO DE LADO IZQUIERDO-->
-  <form class="col-5 p-1" method="POST">
-    <!--LEYENDA DE TEXTO ANTES DEL REGISTRO QUE SEA "PRODUCTOS"-->
-      <h3 class="text-center alert alert-secondary">LIMPIEZA</h3>
-      <!--CODIGO PHP PARA MOSTRAR MENSAJE DE LA ELIMINACION DEL PRODUCTO-->
-      <?php
+    <!-- SEGUNDO FORMULARIO -->
+    <form class="col-md-6 p-3" method="POST">
+    <h3 class="text-center" style="font-size: 2.0rem; color:rgb(0, 0, 0); background-color:rgb(158, 222, 176); padding: 10px; border-radius: 5px; border: 1px solid rgb(255,255,255);">JARDINERIA</h3>
+      
+          <!-- MANDANDO A LLAMAR LOS CONTROLADORES Y CARTEPAS INCLUYENDOLOS EN ESTA CLASE -->
+    <?php
       include "controlador/eliminar_productos.php";
-      ?>
-  <!--SE MANDAN A LLAMAR CARPETAS PARA QUE SE PUEDA TRABAJAR CON ELLAS EN ESTA CARPETA POR MEDIO DE UN CODIGO EN PHP-->
-      <?php
+      
       include "php_inv/conexion.php";
       include "controlador/registro_productos.php";
       ?>
-  <!--DIVS PARA DEFINIR LOS RECUADROS DEL REGISTRO, CON SU FORMATO, CLASE, TIPO QUE SEA DE TEXTO Y CON SU NAME DENTRO DE UN LABEL E INPUT-->
+          <!-- CUADRO DE TEXTOS CON SU ESTILO, NAME, TIPO DE RECUADRO Y NOMBRE QUE APARECE EN EL RECUADRO  -->
       <div class="mb-3">
-        <label for="disabledTextInput" class="form-label">Nombre del Producto</label>
+        <label class="form-label">Nombre del Producto</label>
         <input type="text" class="form-control" placeholder="Nombre" name="nom_producto">
       </div>
 
@@ -190,36 +192,38 @@
         <input type="text" class="form-control" placeholder="Comprador" name="comprador">
       </div>
 
-      <!--CONTENEDOR PARA LOS BOTONES CON SU ESTILO, Y SUS ATRIBUTOS REEDIRECCIONANDO A LA CARPETA PARA QUE REALICE LA ACTIVIDAD QUE SE LE DENOMINE-->
+      <div class="mb-3">
+        <label for="disabledTextInput" class="form-label">Fecha</label>
+        <input type="date" class="form-control" placeholder="Fecha" name="fecha">
+      </div>
+    <!-- APARTADO PARA BOTONES DE REGISTRAR Y CERRAR LA SESION CON SU DISEÑO Y TIPO -->
       <div class="row d-flex justify-content-center">
-        <div class="col-5 mb-9">
+        <div class="col-5">
           <button type="submit" class="btn btn-success" name="btnregistrar" value="ok">Registrar</button>
         </div>
-
-
-        <div class="col-4 mb-9">
+        <div class="col-4">
           <a href="php/cerrar_sesion.php" class="btn btn-success" name="btncerrarsesion" value="ok">Cerrar Sesión</a>
         </div>
       </div>
+    
+    </form>
 
-  <!--CIERRES DE LOS FORM, DIV, BODY Y HTML-->
-  </form>
-
-    <!--CODIGO PHP-->
+    
     <?php
     //CODIGO PARA MANDAR A LLAMAR LA CARPETA DE CONEXION CON LA BASE DE DATOS, Y LA VARIABLE $SQL HACIENDO UN SELECT LLAMANDO LA TABLE LLAMADA INVENTARIOS
     include "php_inv/conexion.php";
-    $sql=$conexion->query(" select * from inventario ");
+    $sql=$conexion->query(" select * from inventario_jardineria ");
+
+
+
+    
+    
     
     ?>
-<!--CIERRE DE DIV, BODY Y HTML-->
+
+    <!-- AQUI SE CIERRAN LOS DIVS, EL BODY Y HTML -->
+  </div>
 </div>
-
-
-
-
-
-
 
 
 
