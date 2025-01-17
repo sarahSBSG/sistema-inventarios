@@ -1,0 +1,10 @@
+.contenedor{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    cursor: pointer;
+    box-shadow: 1px 10px 30px;
+    color: lightgreen;
+    top: 200px; /* Ajusta este valor para mover el cuadro más abajo */
+    left: 50px; /* Opcional: ajusta si también quieres moverlo horizontalmente */
+}

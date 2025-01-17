@@ -37,8 +37,24 @@
       return respuesta
     }
   </script>
+
+    <nav>
+      <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+        <i class="fa-solid fa-bars"></i>
+        </label>
+      <a href="#" class="enlace">
+        <img src="formats/images/green.png" alt="" class="logo">
+      </a>
+      <ul>
+        <li><a href="inicio.php">Inicio</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a class="active" href="inventarios.php">Inventario</a></li>
+    </nav>
+
   <!--ESTILO DE TITULO PRINCIPAL DE INVENTARIOS-->
-<h3 class="text-center" style="font-size: 2.0rem; color:rgb(0, 0, 0); background-color:rgb(158, 222, 176); padding: 10px; border-radius: 5px; border: 1px solid rgb(255,255,255);">INGRESO DE PRODUCTOS</h3>
+<h3 class="text-center" style="font-size: 2.0rem; color:rgb(0, 0, 0); background-color:rgb(158, 222, 176); padding: 10px; border-radius: 5px; border: 1px solid rgb(255,255,255); margin-top: 100px;">INGRESO DE PRODUCTOS</h3>
 <!--DIV DEL CONTENEDOR DEL APARTADO DEL REGISTRO DE LOS PRODUCTOS CON UNA CLASE QUE CONTIENE UN EFECTO FLUIDO EN LAS FILAS-->
 
 <div class="container-fluid">

@@ -4,7 +4,7 @@
     session_start();
     //CONDICION PARA DETERMINAR SI EXISTE LA SESION Y MANDAR A LA UBICACION INVENTARIOS.PHP
     if(isset($_SESSION['usuario'])){
-        header("location: inventarios.php");
+        header("location: inicio.php");
     }
 
 ?>
