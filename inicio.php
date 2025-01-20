@@ -27,6 +27,9 @@
     <!--PARA VINCULAR LOS ESTILOS DEL APARTADO ESTILOS.CSS-->
     <link rel="stylesheet" href="formats/css/estilos_barra.css">
     <link rel="stylesheet" href="formats/css/estilos_inicio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <!--CUERPO DE LA PAGINA-->
 <body>
@@ -47,7 +50,31 @@
     </nav>
 
 <div class="contenedor">
-<img src="images/1.png" alt="GREEN" class="imagen">
+  <div class="cuadro">
+    <div class="cuadro_imagen" style="--i:url(../images/1.png)">
+      <h6>MANTENIMIENTO</h6>
+    </div>
+    <div class="cuadro_info">
+      <p class="title">MANTENIMIENTO</p>
+      <div class="description">
+        <div class="item">
+          <i class="fa-solid fa-screwdriver-wrench"></i>
+        </div>
+        <div class="item">
+          <i class="fa-solid fa-toolbox"></i>
+        </div>
+      </div>
+
+      <div class="content">
+        <p class="title">¿De que trata?</p>
+        <li>Mantener su inmueble en perfectas condiciones es nuestra prioridad, así como prevenir fallas y asegurar la conservación de sus instalaciones, con el propósito de reducir costos a largo plazo, por ello, ponemos a su disposición una amplia línea de servicios para llevar a cabo mantenimientos preventivos, correctivos y trabajos especializados.</li>
+      </div>
+
+      <div class="action">
+        <a href="#" class="btn">Ver mas..</a>
+      </div>
+    </div>
+  </div>
 </div>
 
 </body>

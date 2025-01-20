@@ -101,11 +101,4 @@ li a.active, li a:hover{
     }
 }
 
-/*FORMATO DEL CUERPO DE LA PAGINA PARA DEFINIR EL FONDO DE COLOR DEGRADADO Y LA FUENTE*/
-body {
-    background: linear-gradient(
-        90deg,
-        rgb(43, 125, 32) 25%,
-        rgb(19, 168, 32) 73%);
-    font-family: 'Roboto', sans-serif;
-}
+

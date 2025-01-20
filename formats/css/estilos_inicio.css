@@ -1,10 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .contenedor{
-    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
     width: 400px;
-    height: 300px;
-    cursor: pointer;
-    box-shadow: 1px 10px 30px;
-    color: lightgreen;
-    top: 200px; /* Ajusta este valor para mover el cuadro más abajo */
-    left: 50px; /* Opcional: ajusta si también quieres moverlo horizontalmente */
+    margin-left: 150px;
+}
+
+/*FORMATO DEL CUERPO DE LA PAGINA PARA DEFINIR EL FONDO DE COLOR DEGRADADO Y LA FUENTE*/
+body {
+    background: linear-gradient(
+        90deg,
+        rgb(43, 125, 32) 25%,
+        rgb(19, 168, 32) 73%);
+}
+
+.cuadro {
+    position: relative;
+    z-index: 2; /* Coloca la imagen encima */
+}
+
+.cuadro .cuadro_imagen {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 14;
+    box-shadow: 0 2px 20px #fff;
+    background: linear-gradient(transparent 80%, #fff), var(--i);
+    background-position: center;
+    background-size: cover;
+}
+
+.cuadro .cuadro_imagen h6 {
+    position: absolute;
+    bottom: 10px;
+    left: 100px;
+    font-size: 25px;
+    color: black;
+}
+
+.cuadro .cuadro_info {
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    z-index: 1; /* Coloca el texto detrás */
+}
+
+.cuadro .cuadro_info .title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.cuadro .cuadro_info .description {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    text-align: match-parent;
+    
+}
+
+.cuadro .cuadro_info .description .item i {
+    font-size: 24px;
+    color: #28a745;
+}
+
+.cuadro .cuadro_info .content {
+    margin-bottom: 10px;
+}
+
+.cuadro .cuadro_info .action .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
 }
