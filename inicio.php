@@ -27,9 +27,6 @@
     <!--PARA VINCULAR LOS ESTILOS DEL APARTADO ESTILOS.CSS-->
     <link rel="stylesheet" href="formats/css/estilos_barra.css">
     <link rel="stylesheet" href="formats/css/estilos_inicio.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <!--CUERPO DE LA PAGINA-->
 <body>
@@ -49,33 +46,86 @@
         <li><a href="inventarios.php">Inventario</a></li>
     </nav>
 
-<div class="contenedor">
-  <div class="cuadro">
-    <div class="cuadro_imagen" style="--i:url(../images/1.png)">
-      <h6>MANTENIMIENTO</h6>
-    </div>
-    <div class="cuadro_info">
-      <p class="title">MANTENIMIENTO</p>
-      <div class="description">
-        <div class="item">
-          <i class="fa-solid fa-screwdriver-wrench"></i>
-        </div>
-        <div class="item">
-          <i class="fa-solid fa-toolbox"></i>
-        </div>
-      </div>
+  <div class="container">
 
-      <div class="content">
-        <p class="title">¿De que trata?</p>
-        <li>Mantener su inmueble en perfectas condiciones es nuestra prioridad, así como prevenir fallas y asegurar la conservación de sus instalaciones, con el propósito de reducir costos a largo plazo, por ello, ponemos a su disposición una amplia línea de servicios para llevar a cabo mantenimientos preventivos, correctivos y trabajos especializados.</li>
-      </div>
-
-      <div class="action">
-        <a href="#" class="btn">Ver mas..</a>
+    <div class="card">
+      <figure>
+        <img src="formats/images/1.png">
+      </figure>
+      <div class="contenido">
+        <h3>MANTENIMIENTO</h3>
+        <p>Mantener su inmueble en perfectas condiciones es nuestra prioridad, así como prevenir fallas y asegurar la conservación de sus instalaciones, con el propósito de reducir costos a largo plazo, por ello, ponemos a su disposición una amplia línea de servicios para llevar a cabo mantenimientos preventivos, correctivos y trabajos especializados.</p>
+        <a href="#">Leer mas...</a>
       </div>
     </div>
+
+    <div class="card">
+      <figure>
+        <img src="formats/images/2.png">
+      </figure>
+      <div class="contenido">
+        <h3>LIMPIEZA</h3>
+        <p>División dedicada al servicio profesional y especializado en Limpieza Integral, el cual incorpora todas las labores necesarias para la conservación, higiene y desinfección de instalaciones.</p>
+        <a href="#">Leer mas...</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <figure>
+        <img src="formats/images/3.png">
+      </figure>
+      <div class="contenido">
+        <h3>JARDINERIA</h3>
+        <p>Contamos con una amplia gama de servicios para mantener, conservar y restaurar sus áreas verdes, de este modo, podemos garantizar la salud y armonía de estos espacios destinados a realzar la belleza de su inmueble.</p>
+        <a href="#">Leer mas...</a>
+      </div>
+    </div>
+
   </div>
+
+<div class="info">
+  <h3>MANTENIMIENTO</h3>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam minima officiis atque, suscipit vel exercitationem id doloremque tempora eaque. Delectus, eligendi saepe. Iste veniam officia, perspiciatis nihil harum, inventore sequi quaerat iusto minima eos explicabo natus esse pariatur amet distinctio.</p>
+  <img src="formats/images/4.png">
+  <img src="formats/images/5.png">
+  <img src="formats/images/6.png">
 </div>
+
+<div class="info2">
+  <h3>LIMPIEZA</h3>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam minima officiis atque, suscipit vel exercitationem id doloremque tempora eaque. Delectus, eligendi saepe. Iste veniam officia, perspiciatis nihil harum, inventore sequi quaerat iusto minima eos explicabo natus esse pariatur amet distinctio.</p>
+  <img src="formats/images/7.png">
+  <img src="formats/images/8.png">
+  <img src="formats/images/9.png">
+</div>
+
+<div class="info3">
+  <h3>JARDINERIA</h3>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam minima officiis atque, suscipit vel exercitationem id doloremque tempora eaque. Delectus, eligendi saepe. Iste veniam officia, perspiciatis nihil harum, inventore sequi quaerat iusto minima eos explicabo natus esse pariatur amet distinctio.</p>
+  <img src="formats/images/10.png">
+  <img src="formats/images/11.png">
+  <img src="formats/images/12.png">
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".card");
+    const infoSections = document.querySelectorAll(".info, .info2, .info3");
+
+    cards.forEach((card, index) => {
+      const button = card.querySelector("a");
+      button.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        // Ocultar todas las secciones de información
+        infoSections.forEach(section => section.classList.remove("active"));
+
+        // Mostrar la sección correspondiente al índice de la tarjeta
+        infoSections[index].classList.add("active");
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
