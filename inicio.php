@@ -85,7 +85,13 @@
 
 <div class="info">
   <h3>MANTENIMIENTO</h3>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam minima officiis atque, suscipit vel exercitationem id doloremque tempora eaque. Delectus, eligendi saepe. Iste veniam officia, perspiciatis nihil harum, inventore sequi quaerat iusto minima eos explicabo natus esse pariatur amet distinctio.</p>
+  <p>El mantenimiento es un sistema que consta de varios elementos en forma de instalaciones (máquina), reemplazo de componentes o repuestos (material), costos de mantenimiento (dinero), planificación de actividades de mantenimiento (métodos) y ejecución de mantenimiento (hombre).</p>
+  <p>Tiene como objetivo reducir o incluso evitar daños en los equipos al garantizar un nivel de confiabilidad y disponibilidad y minimizar los costos de mantenimiento.</p>
+  <p>- Mantenimiento planificado</p>
+  <p>- Mantenimiento no planificado</p>
+  <p>El concepto suele emplearse con referencia a los procedimientos preventivos y de reparación que se llevan a cabo en edificios y máquinas para que estén en condiciones de seguir en funcionamiento. El mantenimiento implica la preservación y la restauración de los elementos.
+    Se denomina mantenimiento preventivo a aquel que se orienta a conservar las instalaciones y los mecanismos. Para esto se realizan revisiones en equipos que se encuentran en funcionamiento. La finalidad del mantenimiento preventivo es minimizar el riesgo de fallos: esto se puede lograr reemplazando piezas que se encuentran gastadas, por ejemplo.
+  </p>
   <img src="formats/images/4.png">
   <img src="formats/images/5.png">
   <img src="formats/images/6.png">
@@ -93,7 +99,12 @@
 
 <div class="info2">
   <h3>LIMPIEZA</h3>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam minima officiis atque, suscipit vel exercitationem id doloremque tempora eaque. Delectus, eligendi saepe. Iste veniam officia, perspiciatis nihil harum, inventore sequi quaerat iusto minima eos explicabo natus esse pariatur amet distinctio.</p>
+  <p>Cuando hablamos de limpieza, nos referimos usualmente al acto de limpiar, o sea, de eliminar la suciedad y los residuos que haya en un ambiente, una superficie o un objeto cualquiera. Al mismo tiempo, nos podemos referir al grado de pulcritud que tenga dicho espacio, ambiente u objeto.</p>
+  <p>Normalmente, la limpieza involucra el uso de agua y de alguna sustancia limpiadora, o bien de la acción mecánica de algún objeto (como una piedra, o un cepillo) sobre la superficie de aquello que se desea limpiar.</p>
+  <p>- Limpieza manual, la que se lleva a cabo con la fuerza de las manos, empleando cepillos, paños o cualquier otro instrumento sobre la superficie que deseamos limpiar. Es lo que hacemos, por ejemplo, al lavarnos los dientes.</p>
+  <p>- Limpieza por remojo, en la que sumergimos aquello que deseamos limpiar en un recipiente lleno de agua y/o detergentes, y lo dejamos allí dentro durante un rato. Luego el objeto se extrae, se exprime y se observa qué tanto se haya limpiado. En caso de ser necesario, se lo sumerge un rato más. Es lo que hacen las lavadoras de ropa, en distintos ciclos.</p>
+  <p>- Limpieza por aspersión, que consiste en el uso de maquinarias capaces de succionar lo sucio y la materia sobrante, como aspiradoras, o bien de emitir chorros de aire o agua a grandes presiones, como las pistolas hidráulicas. Así es como limpian los automóviles en los autolavados, o como limpiamos nuestras alfombras con aspiradoras.</p>
+  <p>- Limpieza con espuma, en la que se utilizan detergentes o solventes químicos orgánicos que al aplicarse sobre la superficie producen mucha espuma. Esta última captura la mugre y los microorganismos y luego se la puede retirar mecánicamente, dejando limpia la superficie. Este es, de hecho, el principio con el que actúa el jabón.</p>
   <img src="formats/images/7.png">
   <img src="formats/images/8.png">
   <img src="formats/images/9.png">
@@ -101,7 +112,11 @@
 
 <div class="info3">
   <h3>JARDINERIA</h3>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam minima officiis atque, suscipit vel exercitationem id doloremque tempora eaque. Delectus, eligendi saepe. Iste veniam officia, perspiciatis nihil harum, inventore sequi quaerat iusto minima eos explicabo natus esse pariatur amet distinctio.</p>
+  <p>La jardinería, es una palabra que se utiliza para poder referirse a la técnica que implica el poder cultivar, cuidar y proteger a los jardines</p>
+  <p>La jardinería en sí es bastante importante por distintas razones. Es un medio ideal para lograr mantener un buen estado de salud tanto del suelo como de la fauna que habita en un determinado jardín pero además es una ciencia y una actividad que puede traer grandes beneficios a las personas que la practican. La jardinería es un medio también por el cual se puede ayudar a reducir el impacto del medio ambiente y de darle protección a los diferentes tipos de plantas que en él se coloquen.</p>
+  <h3>RIESGOS</h3>
+  <p>La jardinería puede tener algunos riesgos, los cuales en realidad no son muy comunes.</p>
+  <p>Un aspecto importante es el uso de químicos y de pesticidas, éstos, cuando no son autorizados o cuando no se saben utilizar, podrían ocasionar graves riesgos que incluyen intoxicaciones. En este aspecto es muy importante tener en cuenta las recomendaciones que dan los expertos. Además, el mal uso de las tijeras u otras herramientas de corte podrían provocar heridas de consideración en el cuerpo.</p>
   <img src="formats/images/10.png">
   <img src="formats/images/11.png">
   <img src="formats/images/12.png">

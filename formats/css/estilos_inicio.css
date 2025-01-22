@@ -33,7 +33,7 @@ body {
     box-shadow: 5px 20px 20px rgba(0, 0, 0, 0.2);
     cursor: default;
     transition: all 400ms ease;
-    top: 500px;
+    top: 100px;
 }
 
 .card:hover{
@@ -79,11 +79,12 @@ body {
 
 .info, .info2, .info3 {
     display: none;
-    margin-top: 550px;
+    margin-top: 150px;
     border-top: 1px solid #ccc;
     padding-top: 10px;
     padding: 40px; /* Agrega espacio interno de toda la pagina*/
     color: #fff;
+    text-align: justify;
   }
 
   .info.active, .info2.active, .info3.active {
