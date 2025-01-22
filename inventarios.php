@@ -159,58 +159,58 @@
     <?php
       include "controlador/eliminar_productos.php";
       
-      include "php_inv/conexion.php";
+      include "php_inv/conexion_jar.php";
       include "controlador/registro_productos.php";
       ?>
           <!-- CUADRO DE TEXTOS CON SU ESTILO, NAME, TIPO DE RECUADRO Y NOMBRE QUE APARECE EN EL RECUADRO  -->
       <div class="mb-3">
         <label class="form-label">Nombre del Producto</label>
-        <input type="text" class="form-control" placeholder="Nombre" name="nom_producto">
+        <input type="text" class="form-control" placeholder="Nombre" name="nom_productos">
       </div>
 
       <div class="mb-3">
         <label for="disabledTextInput" class="form-label">Marca</label>
-        <input type="text" class="form-control" placeholder="Marca" name="marca">
+        <input type="text" class="form-control" placeholder="Marca" name="marcas">
       </div>
 
       <div class="mb-3">
         <label for="disabledTextInput" class="form-label">Peso</label>
-        <input type="text" class="form-control" placeholder="Peso" name="peso">
+        <input type="text" class="form-control" placeholder="Peso" name="pesos">
       </div>
 
       <div class="mb-3">
         <label for="disabledTextInput" class="form-label">Color</label>
-        <input type="text" class="form-control" placeholder="Color" name="color">
+        <input type="text" class="form-control" placeholder="Color" name="colores">
       </div>
 
       <div class="mb-3">
         <label for="tamaño" class="form-label" >Tamaño</label>
-        <input type="text" class="form-control" placeholder="Tamaño" name="tamaño">
+        <input type="text" class="form-control" placeholder="Tamaño" name="tamaños">
       </div>
 
       <div class="mb-3">
         <label for="cantidad" class="form-label" >Cantidad</label>
-        <input type="text" class="form-control" placeholder="Cantidad" name="cantidad">
+        <input type="text" class="form-control" placeholder="Cantidad" name="cantidades">
       </div>
 
       <div class="mb-3">
         <label for="disabledTextInput" class="form-label">Codigo de Barras</label>
-        <input type="text" class="form-control" placeholder="Codigo" name="codigo_barras">
+        <input type="text" class="form-control" placeholder="Codigo" name="codigos_barras">
       </div>
 
       <div class="mb-3">
         <label for="disabledTextInput" class="form-label">Vendedor</label>
-        <input type="text" class="form-control" placeholder="Vendedor" name="vendedor">
+        <input type="text" class="form-control" placeholder="Vendedor" name="vendedores">
       </div>
 
       <div class="mb-3">
         <label for="disabledTextInput" class="form-label">Comprador</label>
-        <input type="text" class="form-control" placeholder="Comprador" name="comprador">
+        <input type="text" class="form-control" placeholder="Comprador" name="compradores">
       </div>
 
       <div class="mb-3">
         <label for="disabledTextInput" class="form-label">Fecha</label>
-        <input type="date" class="form-control" placeholder="Fecha" name="fecha">
+        <input type="date" class="form-control" placeholder="Fecha" name="fechas">
       </div>
     <!-- APARTADO PARA BOTONES DE REGISTRAR Y CERRAR LA SESION CON SU DISEÑO Y TIPO -->
       <div class="row d-flex justify-content-center">
@@ -227,8 +227,8 @@
     
     <?php
     //CODIGO PARA MANDAR A LLAMAR LA CARPETA DE CONEXION CON LA BASE DE DATOS, Y LA VARIABLE $SQL HACIENDO UN SELECT LLAMANDO LA TABLE LLAMADA INVENTARIOS
-    include "php_inv/conexion.php";
-    $sql=$conexion->query(" select * from inventario_jardineria ");
+    include "php_inv/conexion_jar.php";
+    $sql=$conexion->query(" select * from inventario_jar ");
 
 
 

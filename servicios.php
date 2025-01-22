@@ -26,6 +26,7 @@
     <script src="https://kit.fontawesome.com/d8f04e9fe9.js" crossorigin="anonymous"></script>
     <!--PARA VINCULAR LOS ESTILOS DEL APARTADO ESTILOS.CSS-->
     <link rel="stylesheet" href="formats/css/estilos_barra.css">
+    <link rel="stylesheet" href="formats/css/estilos_servicios.css">
 </head>
 <!--CUERPO DE LA PAGINA-->
 <body>
@@ -52,9 +53,23 @@
         <li><a href="inventarios.php">Inventario</a></li>
     </nav>
 
+<div class="contenedor">
+  
+  <div class="cuadro">
+    <h2>VENTAJAS COMPETITIVAS</h2>
+    <p>- SERVICIO INTEGRALA todo tipo de inmuebles como Corporativos, Residenciales, Oficinas, Centros Comerciales, etc.</p>
+    <p>- ATENCIÓN INMEDIATAA Reportes y Emergencias, asi como suministro de Materiales y Refacciones.</p>
+    <p>- INFORMES DE TRABAJO Reportes estadísticos y fotograficos, detallados de labores mensuales, así como Elaboración de Programa de Actividades para control y revisión de la ejecución de las labores que se realizan en el servicio.</p>
+    <p>- PERSONAL CAPACITADO Para atender todo tipo de necesidades y con amplia experiencía en el séctor.</p>
+    <p>- EVALUACION Y DETECCIÓN DE NECESIDADES Asesoramiento personalizado e implantación de Servicio a la Medida.</p>
+    <p>- POLIZAS DE RESPONSABILIDAD CIVIL</p>
+  </div>
 
+  <div class="cuadro2">
+    <h3></h3>
+  </div>
 
-
+</div>
 
 </body>
 </html>

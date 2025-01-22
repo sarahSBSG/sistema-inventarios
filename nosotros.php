@@ -26,6 +26,7 @@
     <script src="https://kit.fontawesome.com/d8f04e9fe9.js" crossorigin="anonymous"></script>
     <!--PARA VINCULAR LOS ESTILOS DEL APARTADO ESTILOS.CSS-->
     <link rel="stylesheet" href="formats/css/estilos_barra.css">
+    <link rel="stylesheet" href="formats/css/estilos_nosotros.css">
 </head>
 <!--CUERPO DE LA PAGINA-->
 <body>
@@ -52,9 +53,24 @@
         <li><a href="inventarios.php">Inventario</a></li>
     </nav>
 
+<div class="contenedor">
+  
+    <div class="cuadro">
+      <h2>NOSOTROS</h2>
+      <p>Somos una empresa especializada en la gestión de servicios de Mantenimiento, Jardinería y Limpieza para la mejora y conservación inmobiliaria. Nuestro principal objetivo es ofrecer Servicios de Excelente Calidad, que cumplan con las expectativas y exigencias del mercado y a su vez genere relaciones laborales positivas, satisfactorias y de largo plazo.</p>
+    </div>
 
+    <div class="cuadro2">
+      <h2>MISIÓN</h2>
+      <p>Mejorar y dar Plusvalía a todo tipo de inmueble a través de la sinergia de nuestros servicios, haciendo de ellos espacios Confortables, Atractivos y de Excelencia.</p>
+    </div>
 
+    <div class="cuadro3">
+      <h2>VISIÓN</h2>
+      <p>Ofrecer Servicios Inmobiliarios Integrales, Personalizados, Competitivos e Innovadores de la más alta calidad.</p>
+    </div>
 
+</div>
 
 </body>
 </html>

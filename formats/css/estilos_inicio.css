@@ -59,6 +59,10 @@ body {
     text-align: center;
 }
 
+.card .contenido i{
+    text-align: 20px;
+}
+
 .card .contenido a{
     text-decoration: none;
     display: inline-block;

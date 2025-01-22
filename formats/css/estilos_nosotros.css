@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/*FORMATO DEL CUERPO DE LA PAGINA PARA DEFINIR EL FONDO DE COLOR DEGRADADO Y LA FUENTE*/
+body {
+    background: linear-gradient(
+        90deg,
+        rgb(43, 125, 32) 25%,
+        rgb(18, 168, 30) 73%);
+        font-family: sans-serif;
+        width: 100%;
+        height: 100vh;
+
+}
+
+.contenedor {
+    margin: 70px;
+}
+
+.cuadro {
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #13a820;
+    box-shadow: 5px 20px 20px rgba(0, 0, 0, 0.2);
+    cursor: text;
+    transition: all 500ms ease;
+    top: 100px;
+}
+
+.cuadro:hover{
+    text-decoration: aliceblue;
+    box-shadow: 20px 15px 10px rgba(255, 255, 255, 0.2);
+    transform: translateY(-5%);
+
+}
+
+.cuadro h2{
+    margin: 7px;
+    margin-bottom: 15px;
+    color: #183d18;
+    text-align: center;
+}
+
+.cuadro p{
+    margin: 25px;
+    line-height: 1.5;
+    color: #183d18;
+    text-align: justify;
+}
+
+
+
+
+
+.cuadro2 {
+    width: 100%;
+    margin: 50px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #13a820;
+    box-shadow: 5px 20px 20px rgba(0, 0, 0, 0.2);
+    cursor: text;
+    transition: all 500ms ease;
+    top: 150px;
+}
+
+.cuadro2:hover{
+    box-shadow: 20px 15px 10px rgba(255, 255, 255, 0.2);
+    transform: translateY(-5%);
+
+}
+
+.cuadro2 h2{
+    margin: 7px;
+    margin-bottom: 15px;
+    color: #183d18;
+    text-align: center;
+}
+
+.cuadro2 p{
+    margin: 25px;
+    line-height: 1.5;
+    color: #183d18;
+    text-align: justify;
+}
+
+
+
+
+
+.cuadro3 {
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #13a820;
+    box-shadow: 5px 20px 20px rgba(0, 0, 0, 0.2);
+    cursor: text;
+    transition: all 500ms ease;
+    top: 100px;
+    margin-bottom: 30px;
+}
+
+.cuadro3:hover{
+    text-decoration: aliceblue;
+    box-shadow: 20px 15px 10px rgba(255, 255, 255, 0.2);
+    transform: translateY(-5%);
+
+}
+
+.cuadro3 h2{
+    margin: 7px;
+    margin-bottom: 15px;
+    color: #183d18;
+    text-align: center;
+}
+
+.cuadro3 p{
+    margin: 25px;
+    line-height: 1.5;
+    color: #183d18;
+    text-align: justify;
+}

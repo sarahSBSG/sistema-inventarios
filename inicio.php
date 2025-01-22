@@ -54,6 +54,8 @@
       </figure>
       <div class="contenido">
         <h3>MANTENIMIENTO</h3>
+        <i class="fa-solid fa-toolbox"></i>
+        <i class="fa-solid fa-screwdriver-wrench"></i>
         <p>Mantener su inmueble en perfectas condiciones es nuestra prioridad, así como prevenir fallas y asegurar la conservación de sus instalaciones, con el propósito de reducir costos a largo plazo, por ello, ponemos a su disposición una amplia línea de servicios para llevar a cabo mantenimientos preventivos, correctivos y trabajos especializados.</p>
         <a href="#">Leer mas...</a>
       </div>

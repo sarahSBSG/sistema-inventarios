@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/*FORMATO DEL CUERPO DE LA PAGINA PARA DEFINIR EL FONDO DE COLOR DEGRADADO Y LA FUENTE*/
+body {
+    background: linear-gradient(
+        90deg,
+        rgb(43, 125, 32) 25%,
+        rgb(18, 168, 30) 73%);
+        font-family: sans-serif;
+        width: 100%;
+        height: 100vh;
+
+}
+
+.cuadro {
+    margin: 30px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #1b7221;
+    box-shadow: 5px 20px 20px rgba(0, 0, 0, 0.2);
+    cursor: text;
+    transition: all 500ms ease;
+    top: 100px;
+}
+
+.cuadro:hover{
+    text-decoration: aliceblue;
+    box-shadow: 20px 15px 10px rgba(255, 255, 255, 0.2);
+    transform: translateY(-5%);
+
+}
+
+.cuadro h2{
+    margin: 30px;
+    color: #becbbe;
+    text-align: center;
+}
+
+.cuadro p{
+    margin: 20px;
+    line-height: 1.5;
+    color: #becbbe;
+    text-align: justify;
+}
