@@ -50,9 +50,9 @@
         <li><a href="inicio.php">Inicio</a></li>
         <li><a href="#">Nosotros</a></li>
         <li><a href="#">Servicios</a></li>
-        <li><a class="active" href="inventarios.php">Inventario</a></li>
-        <li><a href="#">Inventario Jardineria</a></li>
-      </ul>
+        <li><a href="#">Inventario</a></li>
+        <li><a class="active" href="inventarios2.php">Inventario Jardineria</a></li>
+      </ul> 
     </nav>
 
   <!--ESTILO DE TITULO PRINCIPAL DE INVENTARIOS-->
@@ -66,7 +66,7 @@
 
     <!-- PRIMER FORMULARIO -->
     <form class="col-md-6 p-3" method="POST">
-    <h3 class="text-center" style="font-size: 2.0rem; color:rgb(0, 0, 0); background-color:rgb(158, 222, 176); padding: 10px; border-radius: 5px; border: 1px solid rgb(255,255,255);">LIMPIEZA</h3>
+    <h3 class="text-center" style="font-size: 2.0rem; color:rgb(0, 0, 0); background-color:rgb(158, 222, 176); padding: 10px; border-radius: 5px; border: 1px solid rgb(255,255,255);">JARDINERIA</h3>
           <!-- MANDANDO A LLAMAR LOS CONTROLADORES Y CARTEPAS INCLUYENDOLOS EN ESTA CLASE -->
       <?php
       include "controlador/eliminar_productos.php";
@@ -153,7 +153,9 @@
 
 
 
-<!-- AQUI SE CIERRAN LOS DIVS, EL BODY Y HTML -->
+    
+
+    <!-- AQUI SE CIERRAN LOS DIVS, EL BODY Y HTML -->
   </div>
 </div>
 
@@ -161,5 +163,3 @@
 
 </body>
 </html>
-
-

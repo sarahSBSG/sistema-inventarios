@@ -44,6 +44,8 @@
         <li><a href="nosotros.php">Nosotros</a></li>
         <li><a href="servicios.php">Servicios</a></li>
         <li><a href="inventarios.php">Inventario</a></li>
+        <li><a href="inventarios2.php">Inventario Jardineria</a></li>
+      </ul>
     </nav>
 
   <div class="container">
