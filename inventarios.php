@@ -48,10 +48,10 @@
       </a>
       <ul>
         <li><a href="inicio.php">Inicio</a></li>
-        <li><a href="#">Nosotros</a></li>
-        <li><a href="#">Servicios</a></li>
+        <li><a href="nosotros.php">Nosotros</a></li>
+        <li><a href="servicios.php">Servicios</a></li>
         <li><a class="active" href="inventarios.php">Inventario</a></li>
-        <li><a href="#">Inventario Jardineria</a></li>
+        
       </ul>
     </nav>
 
